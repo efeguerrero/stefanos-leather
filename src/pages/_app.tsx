@@ -7,10 +7,15 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
+//Layout Import
+import Layout from "@/components/Layout";
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={`${inter.variable} scroll-smooth font-inter`}>
-      <Component {...pageProps} />
-    </main>
+    <Layout>
+      <main className={`${inter.variable} scroll-smooth font-inter`}>
+        <Component {...pageProps} />
+      </main>
+    </Layout>
   );
 }
