@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 //Dummy images
 const images = [
   "https://images.pexels.com/photos/5942742/pexels-photo-5942742.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -22,8 +24,10 @@ const Header = () => {
             id="imageGrid"
             className="hidden h-[40%] w-[110vw] grow auto-rows-[100%] grid-cols-5 justify-center gap-6 lg:grid"
           >
-            <img
+            <Image
               src={images[0]}
+              width={600}
+              height={900}
               alt="Living Room Photo"
               className="h-[95%] w-full self-center rounded-lg object-cover"
             />
@@ -31,20 +35,26 @@ const Header = () => {
               <h2 className="col-start-2 mt-4 text-left text-[3.5vw] font-extrabold uppercase leading-[1] tracking-normal text-black">
                 Argentine leather to the world
               </h2>
-              <img
+              <Image
                 src={images[1]}
+                width={600}
+                height={900}
                 alt="Living Room Photo"
                 className="mt-8 h-[60%] w-full rounded-lg object-cover"
               />
             </div>
-            <img
+            <Image
+              width={600}
+              height={900}
               src={images[2]}
               alt="Living Room Photo"
               className="h-[90%] w-full -translate-y-[2rem] self-end rounded-lg object-cover"
             />
             <div className="flex h-full flex-col gap-6">
-              <img
+              <Image
                 src={images[3]}
+                width={600}
+                height={900}
                 alt="Living Room Photo"
                 className="h-[50%] w-full grow self-start rounded-lg object-cover"
               />
@@ -60,8 +70,10 @@ const Header = () => {
               </h2>
             </div>
 
-            <img
+            <Image
               src={images[4]}
+              width={600}
+              height={900}
               alt="Living Room Photo"
               className="h-[85%] w-full -translate-y-[0.5rem] self-end rounded-lg object-cover"
             />
@@ -74,8 +86,11 @@ const Header = () => {
             {images.map((image, index) => {
               return (
                 <>
-                  <img
+                  <Image
+                    key={index}
                     src={image}
+                    width={600}
+                    height={900}
                     alt="Living Room Photo"
                     className="h-full w-full rounded-lg object-cover last:hidden even:-translate-y-[3rem] [&:nth-child(3)]:h-[90%] [&:nth-child(4)]:-translate-y-[1rem] "
                   />
