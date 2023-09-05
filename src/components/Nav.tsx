@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Image from "next/image";
+import Link from "next/link";
 
 //Radix Import
 import * as Dialog from "@radix-ui/react-dialog";
@@ -17,7 +17,7 @@ import {
 
 const navigation = [
   { name: "About", href: "#about" },
-  { name: "Products", href: "#products" },
+  { name: "Products", href: "/products" },
   { name: "Shipping", href: "#shipping" },
   { name: "Contact", href: "#contact" },
 ];
@@ -212,69 +212,77 @@ const Nav = () => {
                         <div className="flex grow flex-col items-center justify-center gap-6 lg:items-center">
                           {navigation.map((item, index) => {
                             return (
-                              <motion.div
+                              <Link
                                 key={index}
-                                whileHover="hover"
-                                whileTap={{
-                                  scale: 0.9,
-                                  transition: {
-                                    duration: 0.1,
-                                  },
-                                }}
-                                initial={{
-                                  y: "var(--translate-wide,0)",
-                                  opacity: "var(--opacity-small,1)",
-                                }}
-                                animate={{ y: 0, opacity: 1 }}
-                                transition={{
-                                  opacity: {
-                                    type: "tween",
-                                    duration: 1,
-                                    delay: 0.3 + index / 5,
-                                  },
-                                  y: {
-                                    type: "tween",
-                                    duration: 0.8,
-                                    delay: 0.2 - index / 10,
-                                  },
-                                }}
-                                className="relative my-4 flex items-center gap-2 [--opacity-small:0] lg:gap-6 lg:[--opacity-small:1] lg:[--translate-wide:-100vw]"
+                                href={item.href}
+                                onClick={() => setIsMenuOpen(false)}
                               >
                                 <motion.div
+                                  key={index}
+                                  whileHover="hover"
+                                  whileTap={{
+                                    scale: 0.9,
+                                    transition: {
+                                      duration: 0.1,
+                                    },
+                                  }}
                                   initial={{
-                                    scaleX: 0,
-                                    scaleY: 0,
+                                    y: "var(--translate-wide,0)",
+                                    opacity: "var(--opacity-small,1)",
                                   }}
-                                  variants={{
-                                    hover: {
-                                      scaleX: 1.1,
-                                      scaleY: 1.1,
-
-                                      transition: {
-                                        backgroundColor: {
-                                          duration: 0,
-                                        },
-                                        duration: 0.3,
-
-                                        type: "tween",
-                                      },
+                                  animate={{ y: 0, opacity: 1 }}
+                                  transition={{
+                                    opacity: {
+                                      type: "tween",
+                                      duration: 1,
+                                      delay: 0.3 + index / 5,
+                                    },
+                                    y: {
+                                      type: "tween",
+                                      duration: 0.8,
+                                      delay: 0.2 - index / 10,
                                     },
                                   }}
-                                  className="bg-gray absolute left-[0] hidden h-[100%] w-[100%] rounded-md lg:block "
-                                ></motion.div>
-                                <motion.a
-                                  variants={{
-                                    hover: {
-                                      color: "var(--hover-color,black)",
-                                    },
-                                  }}
-                                  href={item.href}
-                                  onClick={() => setIsMenuOpen(false)}
-                                  className={`z-10 text-center text-4xl font-light uppercase tracking-widest text-black lg:text-6xl lg:[--hover-color:white]`}
+                                  className="relative my-4 flex items-center gap-2 [--opacity-small:0] lg:gap-6 lg:[--opacity-small:1] lg:[--translate-wide:-100vw]"
                                 >
-                                  {item.name}
-                                </motion.a>
-                              </motion.div>
+                                  <motion.div
+                                    initial={{
+                                      scaleX: 0,
+                                      scaleY: 0,
+                                    }}
+                                    variants={{
+                                      hover: {
+                                        scaleX: 1.1,
+                                        scaleY: 1.1,
+
+                                        transition: {
+                                          backgroundColor: {
+                                            duration: 0,
+                                          },
+                                          duration: 0.3,
+
+                                          type: "tween",
+                                        },
+                                      },
+                                    }}
+                                    className="bg-gray absolute left-[0] hidden h-[100%] w-[100%] rounded-md lg:block "
+                                  ></motion.div>
+
+                                  <motion.h3
+                                    initial={{
+                                      color: "black",
+                                    }}
+                                    variants={{
+                                      hover: {
+                                        color: "var(--hover-color,black)",
+                                      },
+                                    }}
+                                    className={`z-10 text-center text-4xl font-light uppercase tracking-widest  lg:text-6xl lg:[--hover-color:white]`}
+                                  >
+                                    {item.name}
+                                  </motion.h3>
+                                </motion.div>
+                              </Link>
                             );
                           })}
                         </div>

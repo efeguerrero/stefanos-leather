@@ -47,6 +47,7 @@ const Header = () => {
               width={600}
               height={900}
               src={images[2]}
+              priority
               alt="Living Room Photo"
               className="h-[90%] w-full -translate-y-[2rem] self-end rounded-lg object-cover"
             />
@@ -85,16 +86,15 @@ const Header = () => {
           >
             {images.map((image, index) => {
               return (
-                <>
-                  <Image
-                    key={index}
-                    src={image}
-                    width={600}
-                    height={900}
-                    alt="Living Room Photo"
-                    className="h-full w-full rounded-lg object-cover last:hidden even:-translate-y-[3rem] [&:nth-child(3)]:h-[90%] [&:nth-child(4)]:-translate-y-[1rem] "
-                  />
-                </>
+                <Image
+                  key={index}
+                  src={image}
+                  priority={index === 2 ? true : false}
+                  width={600}
+                  height={900}
+                  alt="Living Room Photo"
+                  className="h-full w-full rounded-lg object-cover last:hidden even:-translate-y-[3rem] [&:nth-child(3)]:h-[90%] [&:nth-child(4)]:-translate-y-[1rem] "
+                />
               );
             })}
           </div>
