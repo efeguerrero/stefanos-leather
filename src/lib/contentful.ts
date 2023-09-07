@@ -10,6 +10,16 @@ export interface Categories {
   };
 }
 
+export interface SubCategories {
+  contentTypeId: "subCategories";
+  fields: {
+    name: EntryFieldTypes.Text;
+    description: EntryFieldTypes.RichText;
+    category: any;
+    slug: EntryFieldTypes.Text;
+  };
+}
+
 export interface Products {
   contentTypeId: "products";
   fields: {

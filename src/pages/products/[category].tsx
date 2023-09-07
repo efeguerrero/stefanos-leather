@@ -4,10 +4,15 @@ import React from "react";
 import ProductGrid from "@/components/products/ProductGrid";
 
 //Layout Import
-import ProductsLayout from "@/components/ProductsLayout";
+import ProductsLayout from "@/components/productsLayout/ProductsLayout";
 
 //Contentful Client Import
-import { contentfulClient, Categories, Products } from "@/lib/contentful";
+import {
+  contentfulClient,
+  Categories,
+  Products,
+  SubCategories,
+} from "@/lib/contentful";
 
 //Types Import
 import type { GetStaticProps, GetStaticPaths } from "next";
@@ -35,20 +40,36 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     "fields.category.fields.slug": params?.category,
   });
 
+  const categories = await contentfulClient.getEntries<Categories>({
+    content_type: "categories",
+  });
+
+  const subCategories = await contentfulClient.getEntries<SubCategories>({
+    content_type: "subCategories",
+  });
+
   return {
     props: {
       products: products.items,
+      categories: categories.items,
+      subCategories: subCategories.items,
     },
   };
 };
 
 interface CategoryProductsProps {
   products: any;
+  categories: any;
+  subCategories: any;
 }
 
-const CategoryProducts = ({ products }: CategoryProductsProps) => {
+const CategoryProducts = ({
+  products,
+  categories,
+  subCategories,
+}: CategoryProductsProps) => {
   return (
-    <ProductsLayout>
+    <ProductsLayout categories={categories} subCategories={subCategories}>
       <ProductGrid products={products} />
     </ProductsLayout>
   );
