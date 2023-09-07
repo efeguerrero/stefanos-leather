@@ -20,7 +20,7 @@ const Filters = ({
   subCategories,
 }: FiltersProps) => {
   return (
-    <div className="hidden lg:block">
+    <>
       <h3 className="sr-only">Categories</h3>
       <ul
         role="list"
@@ -80,7 +80,7 @@ const Filters = ({
           )}
         </Disclosure>
       ))}
-    </div>
+    </>
   );
 };
 
