@@ -16,10 +16,10 @@ import {
 } from "framer-motion";
 
 const navigation = [
-  { name: "About", href: "#about" },
+  { name: "About", href: "/#about" },
   { name: "Products", href: "/products" },
-  { name: "Shipping", href: "#shipping" },
-  { name: "Contact", href: "#contact" },
+  { name: "Shipping", href: "/#shipping" },
+  { name: "Contact", href: "/#contact" },
 ];
 
 const Nav = () => {
