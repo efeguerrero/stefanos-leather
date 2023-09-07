@@ -3,6 +3,9 @@ import React from "react";
 //Component Imports
 import ProductGrid from "@/components/products/ProductGrid";
 
+//Layout Import
+import ProductsLayout from "@/components/ProductsLayout";
+
 //Contentful Client Import
 import { contentfulClient, Categories, Products } from "@/lib/contentful";
 
@@ -44,8 +47,11 @@ interface CategoryProductsProps {
 }
 
 const CategoryProducts = ({ products }: CategoryProductsProps) => {
-  console.log(products);
-  return <ProductGrid products={products} />;
+  return (
+    <ProductsLayout>
+      <ProductGrid products={products} />
+    </ProductsLayout>
+  );
 };
 
 export default CategoryProducts;

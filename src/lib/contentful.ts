@@ -1,9 +1,4 @@
-import {
-  createClient,
-  EntryFieldTypes,
-  Asset,
-  EntriesQueries,
-} from "contentful";
+import { createClient, EntryFieldTypes, Asset } from "contentful";
 
 export interface Categories {
   contentTypeId: "categories";
@@ -21,7 +16,7 @@ export interface Products {
     name: EntryFieldTypes.Text;
     description: EntryFieldTypes.RichText;
     category: any;
-    subCategory: EntryFieldTypes.Text;
+    subCategory: any;
     coverImage: Asset;
     slug: EntryFieldTypes.Text;
   };

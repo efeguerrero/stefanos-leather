@@ -1,3 +1,6 @@
+//Layout Import
+import ProductsLayout from "@/components/ProductsLayout";
+
 //Component Imports
 import ProductGrid from "@/components/products/ProductGrid";
 
@@ -27,5 +30,9 @@ interface PrductsProps {
 export default function Products({ products }: PrductsProps) {
   console.log(products);
 
-  return <ProductGrid products={products} />;
+  return (
+    <ProductsLayout>
+      <ProductGrid products={products} />
+    </ProductsLayout>
+  );
 }
