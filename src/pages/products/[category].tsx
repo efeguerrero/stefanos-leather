@@ -4,22 +4,10 @@ import React from "react";
 import ProductGrid from "@/components/products/ProductGrid";
 
 //Contentful Client Import
-import { contentfulClient, Categories } from "@/lib/contentful";
+import { contentfulClient, Categories, Products } from "@/lib/contentful";
 
 //Types Import
 import type { GetStaticProps, GetStaticPaths } from "next";
-
-export const getStaticProps: GetStaticProps = async () => {
-  const categories = await contentfulClient.getEntries<Categories>({
-    content_type: "categories",
-  });
-
-  return {
-    props: {
-      categories: categories.items,
-    },
-  };
-};
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const categories = await contentfulClient.getEntries<Categories>({
@@ -36,8 +24,28 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-const CategoryProducts = () => {
-  return <div>category page</div>;
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const products = await contentfulClient.getEntries<Products>({
+    content_type: "products",
+    // We specify the reference content type when we use them to query our entries
+    "fields.category.sys.contentType.sys.id": "categories",
+    "fields.category.fields.slug": params?.category,
+  });
+
+  return {
+    props: {
+      products: products.items,
+    },
+  };
+};
+
+interface CategoryProductsProps {
+  products: any;
+}
+
+const CategoryProducts = ({ products }: CategoryProductsProps) => {
+  console.log(products);
+  return <ProductGrid products={products} />;
 };
 
 export default CategoryProducts;
