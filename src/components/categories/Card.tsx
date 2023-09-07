@@ -8,6 +8,7 @@ interface CardProps {
 interface Category {
   name: string;
   description: string;
+  slug: string;
   coverImage: {
     fields: {
       file: {
@@ -18,7 +19,7 @@ interface Category {
 }
 
 const Card = ({ category }: CardProps) => {
-  const { name, description, coverImage }: Category = category.fields;
+  const { name, description, slug, coverImage }: Category = category.fields;
 
   const coverImageUrl = coverImage.fields.file.url;
 
@@ -45,12 +46,7 @@ const Card = ({ category }: CardProps) => {
           {name}
         </h2>
         <h3 className="text-lg font-medium text-white/70">{description}</h3>
-        <Link
-          href={{
-            pathname: "/products",
-            query: { name },
-          }}
-        >
+        <Link href={`/products/${slug}`}>
           <button className="mt-4 cursor-pointer rounded-lg bg-white px-4 py-2 text-sm font-medium text-black transition-all duration-300 hover:bg-black hover:text-white">
             See More
           </button>

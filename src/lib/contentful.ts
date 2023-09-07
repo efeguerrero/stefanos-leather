@@ -10,6 +10,18 @@ export interface Categories {
   };
 }
 
+export interface Products {
+  contentTypeId: "products";
+  fields: {
+    name: EntryFieldTypes.Text;
+    description: EntryFieldTypes.RichText;
+    category: EntryFieldTypes.Text;
+    subCategory: EntryFieldTypes.Text;
+    coverImage: Asset;
+    slug: EntryFieldTypes.Text;
+  };
+}
+
 export const contentfulClient = createClient({
   space: process.env.CONTENTFUL_SPACE_ID!,
   accessToken: process.env.CONTENTFUL_DELIVERY_TOKEN!,
