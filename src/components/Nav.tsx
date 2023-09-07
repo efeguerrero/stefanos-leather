@@ -265,7 +265,7 @@ const Nav = () => {
                                         },
                                       },
                                     }}
-                                    className="bg-gray absolute left-[0] hidden h-[100%] w-[100%] rounded-md lg:block "
+                                    className="absolute left-[0] hidden h-[100%] w-[100%] rounded-md bg-gray lg:block "
                                   ></motion.div>
 
                                   <motion.h3
