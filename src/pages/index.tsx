@@ -1,13 +1,15 @@
 //Contentful Client Import
 import { contentfulClient, Categories } from "@/lib/contentful";
 
+import type { GetStaticProps } from "next";
+
 //Component Imports
 import Header from "@/components/Header";
 import CategoriesGrid from "@/components/categories/CategoriesGrid";
 
 //Get Static Props Function
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const categories = await contentfulClient.getEntries<Categories>({
     content_type: "categories",
   });
@@ -17,7 +19,7 @@ export async function getStaticProps() {
       categories: categories.items,
     },
   };
-}
+};
 
 //Props Interface
 interface HomeProps {

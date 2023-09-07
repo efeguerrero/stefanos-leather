@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Link from "next/link";
 
 //Radix Import
@@ -22,7 +22,7 @@ const navigation = [
   { name: "Contact", href: "/#contact" },
 ];
 
-const Nav = () => {
+export default function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
 
@@ -297,6 +297,4 @@ const Nav = () => {
       </motion.nav>
     </motion.section>
   );
-};
-
-export default Nav;
+}
