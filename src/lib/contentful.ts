@@ -1,4 +1,12 @@
-import { createClient, EntryFieldTypes, Asset } from "contentful";
+import {
+  createClient,
+  EntryFieldTypes,
+  Asset,
+  LinkType,
+  Entry,
+  ContentType,
+  ContentTypeLink,
+} from "contentful";
 
 export interface Categories {
   contentTypeId: "categories";
@@ -15,7 +23,7 @@ export interface SubCategories {
   fields: {
     name: EntryFieldTypes.Text;
     description: EntryFieldTypes.RichText;
-    category: any;
+    category: EntryFieldTypes.EntryLink<Categories>;
     slug: EntryFieldTypes.Text;
   };
 }
@@ -36,3 +44,5 @@ export const contentfulClient = createClient({
   space: process.env.CONTENTFUL_SPACE_ID!,
   accessToken: process.env.CONTENTFUL_DELIVERY_TOKEN!,
 });
+
+//Functions Definitions

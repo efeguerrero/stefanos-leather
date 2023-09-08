@@ -9,7 +9,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
 
   return (
     <a href="/products" className="group">
-      <div className="aspect-h-1 aspect-w-1 bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 w-full overflow-hidden rounded-lg">
+      <div className=" bg-gray-200 aspect-[4/5] w-full overflow-hidden rounded-lg">
         <img
           src={coverImage.fields.file.url}
           alt="Product Image"
