@@ -23,6 +23,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   //If I where to use const paths = subCategories.items.amp(async)... and then return params object, since I'm getting an entry from contentful inside map, I need to make it Async. When you use async inside the map function, TypeScript interprets the return type as an array of promises (Promise<T>[]), which can cause issues when you try to use the result. To resolve this, you can use Promise.all to wait for all the promises to resolve and then map the results to the desired structure.
 
   const promiseArray = subCategories.items.map(async (subCategory) => {
+    //From the subCategory.fields.category I can only access .sys.id due to this being typed as an UnresolvedLink. To access the category I need to get the ID and then use that to get the category.
     const categoryID = subCategory.fields.category.sys.id;
     const category = await contentfulClient.getEntry<Categories>(categoryID);
     const categorySlug = category.fields.slug;
