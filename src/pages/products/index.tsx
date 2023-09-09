@@ -1,5 +1,6 @@
 //Layout Import
 import ProductsLayout from "@/components/productsLayout/ProductsLayout";
+import Layout from "@/components/Layout";
 
 //Component Imports
 import ProductGrid from "@/components/products/ProductGrid";
@@ -13,7 +14,9 @@ import {
 } from "@/lib/contentful";
 
 //Types Import
-import type { GetStaticProps } from "next";
+import type { GetStaticProps, GetStaticPaths } from "next";
+import type { NextPageWithLayout } from "@/pages/_app";
+import type { ReactElement } from "react";
 
 export const getStaticProps: GetStaticProps = async () => {
   const products = await contentfulClient.getEntries<Products>({
@@ -40,20 +43,17 @@ export const getStaticProps: GetStaticProps = async () => {
 //Props Interface
 interface ProductsProps {
   products: any;
-  categories: any;
-  subCategories: any;
+  Component: NextPageWithLayout;
 }
 
-export default function Products({
-  products,
-  categories,
-  subCategories,
-}: ProductsProps) {
-  console.log(subCategories);
+export default function Products({ products }: ProductsProps) {
+  return <ProductGrid products={products} />;
+}
 
+Products.getLayout = function getLayout(page: ReactElement) {
   return (
-    <ProductsLayout categories={categories} subCategories={subCategories}>
-      <ProductGrid products={products} />
-    </ProductsLayout>
+    <Layout>
+      <ProductsLayout>{page}</ProductsLayout>
+    </Layout>
   );
-}
+};

@@ -1,8 +1,11 @@
-//Layout Import
-import ProductsLayout from "@/components/productsLayout/ProductsLayout";
-
 //Types Import
 import type { GetStaticProps, GetStaticPaths } from "next";
+import type { NextPageWithLayout } from "@/pages/_app";
+import type { ReactElement } from "react";
+
+//Layout Import
+import ProductsLayout from "@/components/productsLayout/ProductsLayout";
+import Layout from "@/components/Layout";
 
 //Contentful Client Import
 import {
@@ -72,21 +75,18 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
 interface SubCategoryProductsProps {
   products: any;
-  categories: any;
-  subCategories: any;
+  Component: NextPageWithLayout;
 }
 
-const SubCategory = ({
-  products,
-  categories,
-  subCategories,
-}: SubCategoryProductsProps) => {
-  console.log(subCategories);
+const SubCategory = ({ products }: SubCategoryProductsProps) => {
+  return <ProductGrid products={products} />;
+};
 
+SubCategory.getLayout = function getLayout(page: ReactElement) {
   return (
-    <ProductsLayout categories={categories} subCategories={subCategories}>
-      <ProductGrid products={products} />
-    </ProductsLayout>
+    <Layout>
+      <ProductsLayout>{page}</ProductsLayout>
+    </Layout>
   );
 };
 

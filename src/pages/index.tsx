@@ -1,11 +1,15 @@
 //Contentful Client Import
 import { contentfulClient, Categories } from "@/lib/contentful";
 
-import type { GetStaticProps } from "next";
-
 //Component Imports
 import Header from "@/components/Header";
 import CategoriesGrid from "@/components/categories/CategoriesGrid";
+import Layout from "@/components/Layout";
+
+//Types Imports
+import type { NextPageWithLayout } from "./_app";
+import type { GetStaticProps } from "next";
+import type { ReactElement } from "react";
 
 //Get Static Props Function
 
@@ -24,13 +28,20 @@ export const getStaticProps: GetStaticProps = async () => {
 //Props Interface
 interface HomeProps {
   categories: any;
+  Component: NextPageWithLayout;
 }
 
-export default function Home({ categories }: HomeProps) {
+const Home = ({ categories }: HomeProps) => {
   return (
     <>
       <Header />
       <CategoriesGrid categories={categories} />
     </>
   );
-}
+};
+
+Home.getLayout = function getLayout(page: ReactElement) {
+  return <Layout>{page}</Layout>;
+};
+
+export default Home;

@@ -1,21 +1,30 @@
+import type { ReactElement, ReactNode } from "react";
+import type { NextPage } from "next";
+
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { Inter } from "next/font/google";
+
+export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
+  getLayout?: (page: ReactElement) => ReactNode;
+};
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
 });
 
-//Layout Import
-import Layout from "@/components/Layout";
+type AppPropsWithLayout = AppProps & {
+  Component: NextPageWithLayout;
+};
 
-export default function App({ Component, pageProps }: AppProps) {
-  return (
-    <Layout>
-      <main className={`${inter.variable} scroll-smooth font-inter`}>
-        <Component {...pageProps} />
-      </main>
-    </Layout>
+export default function App({ Component, pageProps }: AppPropsWithLayout) {
+  // Use the layout defined at the page level, if available
+  const getLayout = Component.getLayout ?? ((page) => page);
+
+  return getLayout(
+    <main className={`${inter.variable} scroll-smooth font-inter`}>
+      <Component {...pageProps} />
+    </main>,
   );
 }
