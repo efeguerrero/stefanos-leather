@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import Link from "next/link";
 
-import { Disclosure } from "@headlessui/react";
+import { Disclosure, Transition } from "@headlessui/react";
 
 import { MinusIcon, PlusIcon } from "@heroicons/react/20/solid";
 
@@ -53,29 +53,38 @@ const Filters = ({
                   )}
                 </span>
               </Disclosure.Button>
-              <Disclosure.Panel className="pt-6">
-                <div className="flex flex-col gap-2">
-                  <Link
-                    href={`/products/${category.fields.slug}`}
-                    className="text-sm"
-                  >{`All ${category.fields.name} `}</Link>
-                  {subCategories.map((subCategory: any) => {
-                    return (
-                      <Fragment key={subCategory.sys.id}>
-                        {category.fields.slug ===
-                        subCategory.fields.category.fields.slug ? (
-                          <Link
-                            href={`/products/${category.fields.slug}/${subCategory.fields.slug}`}
-                            className="text-sm"
-                          >
-                            {subCategory.fields.name}
-                          </Link>
-                        ) : null}
-                      </Fragment>
-                    );
-                  })}
-                </div>
-              </Disclosure.Panel>
+              <Transition
+                enter="transition duration-200 ease-out"
+                enterFrom="transform opacity-0"
+                enterTo="transform  opacity-100"
+                leave="transition duration-75 ease-out"
+                leaveFrom="transform opacity-100"
+                leaveTo="transform opacity-0"
+              >
+                <Disclosure.Panel className="pt-6" static>
+                  <div className="flex flex-col gap-2">
+                    <Link
+                      href={`/products/${category.fields.slug}`}
+                      className="text-sm"
+                    >{`All ${category.fields.name} `}</Link>
+                    {subCategories.map((subCategory: any) => {
+                      return (
+                        <Fragment key={subCategory.sys.id}>
+                          {category.fields.slug ===
+                          subCategory.fields.category.fields.slug ? (
+                            <Link
+                              href={`/products/${category.fields.slug}/${subCategory.fields.slug}`}
+                              className="text-sm"
+                            >
+                              {subCategory.fields.name}
+                            </Link>
+                          ) : null}
+                        </Fragment>
+                      );
+                    })}
+                  </div>
+                </Disclosure.Panel>
+              </Transition>
             </>
           )}
         </Disclosure>
