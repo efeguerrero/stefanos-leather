@@ -8,16 +8,19 @@ interface CategoriesGridProps {
 
 const CategoriesGrid = ({ categories }: CategoriesGridProps) => {
   return (
-    <section id="categories" className="my-12 min-h-[100svh] bg-white lg:my-24">
-      <section className="container">
-        <h2 className="text-4xl font-bold uppercase">Our Products</h2>
-        <div className="mt-16 flex h-full flex-wrap items-center justify-center gap-6 overflow-hidden lg:gap-0 lg:rounded-xl lg:px-24">
-          {categories.map((category: any) => (
-            <Card category={category} key={category.sys.id} />
-          ))}
+    <div className="bg-gray-100">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
+          <h2 className="text-gray-900 text-4xl font-bold">Our Products</h2>
+
+          <div className="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
+            {categories.map((category: any) => (
+              <Card category={category} key={category.sys.id} />
+            ))}
+          </div>
         </div>
-      </section>
-    </section>
+      </div>
+    </div>
   );
 };
 
