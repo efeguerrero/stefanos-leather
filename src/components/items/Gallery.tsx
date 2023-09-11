@@ -2,7 +2,7 @@ import React from "react";
 
 //Type Definition
 interface GalleryProps {
-  images: Array;
+  images: any[];
 }
 
 const Gallery = ({ images }: GalleryProps) => {
@@ -10,7 +10,7 @@ const Gallery = ({ images }: GalleryProps) => {
 
   return (
     <section className="mx-auto flex flex-col gap-6">
-      <div className="aspect-square h-[25rem] overflow-hidden rounded-md">
+      <div className="aspect-square w-full overflow-hidden rounded-md lg:h-[25rem] lg:w-auto">
         <img
           src={currentImg}
           alt="product"
@@ -18,9 +18,12 @@ const Gallery = ({ images }: GalleryProps) => {
         />
       </div>
       <div className="flex cursor-pointer flex-row gap-3">
-        {images.map((image: any) => {
+        {images.map((image: any, index: number) => {
           return (
-            <div className="wrap aspect-square w-[25%] overflow-hidden rounded-md">
+            <div
+              key={index}
+              className="wrap aspect-square w-[25%] overflow-hidden rounded-md"
+            >
               <img
                 onClick={() => setCurrentImg(image.fields.file.url)}
                 src={image.fields.file.url}

@@ -10,8 +10,10 @@ interface ItemProps {
 }
 
 const Item = ({ product }: ItemProps) => {
+  console.log(product);
+
   return (
-    <div className="grid gap-2 px-12 lg:grid-cols-2">
+    <div className="grid gap-2 lg:grid-cols-2 lg:px-12">
       <Info product={product} />
       <Gallery images={product.fields.images} />
     </div>

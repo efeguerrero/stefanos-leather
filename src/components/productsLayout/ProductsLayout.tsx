@@ -147,7 +147,10 @@ const ProductsLayout = ({ children }: LayoutProps) => {
             </div>
           </div>
 
-          <section aria-labelledby="products-heading" className="pb-24 pt-6">
+          <section
+            aria-labelledby="products-heading"
+            className="pb-24 pt-8 lg:pt-16"
+          >
             {/* Desktop View - Including Products */}
             <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
               {/* Filters */}
@@ -159,7 +162,7 @@ const ProductsLayout = ({ children }: LayoutProps) => {
                 />
               </div>
               {/* Product grid */}
-              <div className="px-8 pt-16 lg:col-span-3">{children}</div>
+              <div className="lg:col-span-3 lg:px-8">{children}</div>
             </div>
           </section>
         </main>

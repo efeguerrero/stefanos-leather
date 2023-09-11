@@ -17,22 +17,20 @@ const Info = ({ product }: InfoProps) => {
       {/* Product info */}
       <div className="mx-auto w-full">
         <div className="">
-          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            {name}
-          </h1>
+          <h1 className="text-4xl font-bold tracking-tight">{name}</h1>
         </div>
-        <div className="py-10 lg:pb-16 lg:pr-8 lg:pt-6">
+        <div className="py-6 lg:pb-16 lg:pr-8 lg:pt-6">
           {/* Description and details */}
           <div>
             <h3 className="sr-only">Description</h3>
-            <div className="space-y-6">
-              <p className="text-base text-gray">{description}</p>
-            </div>
+            <p className="text-lg text-gray lg:text-base">{description}</p>
           </div>
           {/* Sizes Info */}
-          <div className="mt-10">{sizes ? <Sizes sizes={sizes} /> : null}</div>
+          <div className="mt-6 lg:mt-10">
+            {sizes ? <Sizes sizes={sizes} /> : null}
+          </div>
           {/* Colors Info */}
-          <div className="mt-10">
+          <div className="mt-6 lg:mt-10">
             {colors ? <Colors colors={colors} /> : null}
           </div>
         </div>
