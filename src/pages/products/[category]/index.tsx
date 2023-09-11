@@ -66,11 +66,7 @@ interface CategoryProductsProps {
 }
 
 const CategoryProducts = ({ products }: CategoryProductsProps) => {
-  return (
-    // <ProductsLayout categories={categories} subCategories={subCategories}>
-    <ProductGrid products={products} />
-    // </ProductsLayout>
-  );
+  return <ProductGrid products={products} />;
 };
 
 CategoryProducts.getLayout = function getLayout(page: ReactElement) {

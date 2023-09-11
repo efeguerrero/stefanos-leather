@@ -6,9 +6,10 @@ interface ProductCardProps {
 
 const ProductCard = ({ product }: ProductCardProps) => {
   const { name, coverImage, slug } = product.fields;
+  const { id } = product.sys;
 
   return (
-    <a href="/products" className="group">
+    <a href={`/item/${id}/${slug}`} className="group">
       <div className=" bg-gray-200 aspect-[4/5] w-full overflow-hidden rounded-lg">
         <img
           src={coverImage.fields.file.url}

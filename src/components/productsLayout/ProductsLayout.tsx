@@ -6,7 +6,12 @@ import { XMarkIcon } from "@heroicons/react/24/outline";
 import { FunnelIcon } from "@heroicons/react/20/solid";
 
 //Contentful Imports
-import { contentfulClient, Categories, SubCategories } from "@/lib/contentful";
+import {
+  contentfulClient,
+  Categories,
+  SubCategories,
+  Products,
+} from "@/lib/contentful";
 import { Entry } from "contentful";
 
 //Component Imports
@@ -39,14 +44,16 @@ const ProductsLayout = ({ children }: LayoutProps) => {
   const [subCategories, setSubCategories] = useState<Entry[]>([]);
 
   useEffect(() => {
-    console.log("rendered");
-
     const getFiltersData = async () => {
       const categories = await contentfulClient.getEntries<Categories>({
         content_type: "categories",
       });
       const subCategories = await contentfulClient.getEntries<SubCategories>({
         content_type: "subCategories",
+      });
+
+      const products = await contentfulClient.getEntries<Products>({
+        content_type: "products",
       });
 
       categories.items ? setCategories(categories.items) : setCategories([]);
