@@ -29,6 +29,8 @@ export interface Products {
     subCategory: EntryFieldTypes.EntryLink<SubCategories>;
     coverImage: Asset;
     slug: EntryFieldTypes.Text;
+    colors: EntryFieldTypes.Text[];
+    sizes: EntryFieldTypes.Text[];
   };
 }
 
