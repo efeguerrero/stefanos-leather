@@ -8,6 +8,7 @@ import type { ReactElement } from "react";
 //Component Imports
 import ProductsLayout from "@/components/productsLayout/ProductsLayout";
 import Layout from "@/components/Layout";
+import Item from "@/components/items/Item";
 
 //Contentful Client Import
 import { contentfulClient, Products } from "@/lib/contentful";
@@ -45,9 +46,7 @@ interface ProductProps {
 }
 
 const Product = ({ product }: ProductProps) => {
-  console.log(product.fields.name);
-
-  return <div>This is a product page for {product.fields.name} </div>;
+  return <Item product={product} />;
 };
 
 Product.getLayout = function getLayout(page: ReactElement) {
