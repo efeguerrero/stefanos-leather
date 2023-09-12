@@ -13,7 +13,6 @@ const config: Config = {
         current: "currentColor",
         white: "#ffffff",
         black: "#080708",
-        gray: "#5F5F58",
         alpha: "#574238",
         bravo: "#EF946C",
       },

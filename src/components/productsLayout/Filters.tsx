@@ -24,7 +24,7 @@ const Filters = ({
       <h3 className="sr-only">Categories</h3>
       <ul
         role="list"
-        className="border-gray-200 text-gray-900 space-y-4 border-b pb-6 text-sm font-medium"
+        className="space-y-4 border-b border-gray/50 pb-6 text-sm font-medium"
       >
         {filterOptions.map((filterOption, index) => (
           <li key={index}>
@@ -37,12 +37,12 @@ const Filters = ({
         <Disclosure
           as="div"
           key={category.sys.id}
-          className="border-gray-200 border-b py-6"
+          className="border-b border-gray/50 py-6"
         >
           {({ open }) => (
             <>
               <Disclosure.Button className="text-gray-400 hover:text-gray-500 flex w-full items-center justify-between bg-white text-sm">
-                <h3 className="text-gray-900 text-base font-medium">
+                <h3 className="font-medium text-black ">
                   {category.fields.name}
                 </h3>
                 <span className="ml-6 flex items-center">
@@ -65,7 +65,7 @@ const Filters = ({
                   <div className="flex flex-col gap-2">
                     <Link
                       href={`/products/${category.fields.slug}`}
-                      className="text-sm"
+                      className="text-gray-500 text-sm"
                     >{`All ${category.fields.name} `}</Link>
                     {subCategories.map((subCategory: any) => {
                       return (
@@ -74,7 +74,7 @@ const Filters = ({
                           subCategory.fields.category.fields.slug ? (
                             <Link
                               href={`/products/${category.fields.slug}/${subCategory.fields.slug}`}
-                              className="text-sm"
+                              className="text-gray-500 text-sm"
                             >
                               {subCategory.fields.name}
                             </Link>

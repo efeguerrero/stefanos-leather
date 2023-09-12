@@ -9,7 +9,7 @@ export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
 };
 
-const inter = Inter({
+export const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
 });
@@ -22,9 +22,5 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
   // Use the layout defined at the page level, if available
   const getLayout = Component.getLayout ?? ((page) => page);
 
-  return getLayout(
-    <main className={`${inter.variable} scroll-smooth font-inter`}>
-      <Component {...pageProps} />
-    </main>,
-  );
+  return getLayout(<Component {...pageProps} />);
 }
