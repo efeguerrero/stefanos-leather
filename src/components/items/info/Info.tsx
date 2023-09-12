@@ -23,7 +23,7 @@ const Info = ({ product }: InfoProps) => {
           {/* Description and details */}
           <div>
             <h3 className="sr-only">Description</h3>
-            <p className="text-lg text-gray lg:text-base">{description}</p>
+            <p className="text-gray-600 text-lg lg:text-base">{description}</p>
           </div>
           {/* Sizes Info */}
           <div className="mt-6 lg:mt-10">

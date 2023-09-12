@@ -129,10 +129,8 @@ const ProductsLayout = ({ children }: LayoutProps) => {
         {/* End of mobile filter dialog */}
 
         <main className="container">
-          <div className="border-gray-200 flex items-baseline justify-between border-b pb-6 pt-28">
-            <h1 className="text-gray-900 text-4xl font-bold tracking-tight">
-              Our Products
-            </h1>
+          <div className="border-gray-300 flex items-baseline justify-between border-b pb-6 pt-28">
+            <h1 className="text-4xl font-bold tracking-tight">Our Products</h1>
 
             <div className="flex items-center">
               {/* Filter Button for mobile View */}

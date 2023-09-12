@@ -12,8 +12,8 @@ const Sizes = ({ sizes }: SizesProps) => {
       <div className="mt-4">
         <ul role="list" className="list-disc space-y-2 pl-4 text-base">
           {sizes.map((size: string, index: number) => (
-            <li key={index} className="text-gray">
-              <span className="text-gray">{size}</span>
+            <li key={index} className="text-gray-600">
+              <span className="text-gray-600">{size}</span>
             </li>
           ))}
         </ul>
