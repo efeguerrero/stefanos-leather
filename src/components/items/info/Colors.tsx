@@ -8,7 +8,7 @@ interface ColorsProps {
 const Colors = ({ colors }: ColorsProps) => {
   return (
     <>
-      <h3 className="text-lg font-medium">Available Colors</h3>
+      <h3 className="font-medium">Available Colors</h3>
       <div className="mt-4">
         <ul role="list" className="list-disc space-y-2 pl-4 text-base">
           {colors.map((color: string, index: number) => (
