@@ -245,15 +245,15 @@ export default function Nav() {
                                   }}
                                   className="relative my-4 flex items-center gap-2 [--opacity-small:0] lg:gap-6 lg:[--opacity-small:1] lg:[--translate-wide:-100vw]"
                                 >
-                                  <motion.div
+                                  {/* <motion.div
                                     initial={{
                                       scaleX: 0,
                                       scaleY: 0,
                                     }}
                                     variants={{
                                       hover: {
-                                        scaleX: 1.1,
-                                        scaleY: 1.1,
+                                        scaleX: 1,
+                                        scaleY: 1,
 
                                         transition: {
                                           backgroundColor: {
@@ -265,19 +265,19 @@ export default function Nav() {
                                         },
                                       },
                                     }}
-                                    className="absolute left-[0] hidden h-[100%] w-[100%] rounded-md bg-gray lg:block "
-                                  ></motion.div>
+                                    className="absolute left-[-20%] top-[50%] hidden h-[20px] w-[20px] -translate-y-[-50%] rounded-full bg-black lg:block "
+                                  ></motion.div> */}
 
                                   <motion.h3
                                     initial={{
-                                      color: "black",
+                                      letterSpacing: "0.1rem",
                                     }}
                                     variants={{
                                       hover: {
-                                        color: "var(--hover-color,black)",
+                                        letterSpacing: "0.4rem",
                                       },
                                     }}
-                                    className={`z-10 text-center text-4xl font-light uppercase tracking-widest  lg:text-6xl lg:[--hover-color:white]`}
+                                    className="z-10 text-center text-4xl font-extralight uppercase tracking-widest lg:text-6xl"
                                   >
                                     {item.name}
                                   </motion.h3>
