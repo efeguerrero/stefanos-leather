@@ -33,6 +33,7 @@ const Filters = ({
       </ul>
       {categories.map((category: any, index: number) => (
         <FilterAccordion
+          key={index}
           category={category}
           subCategories={subCategories}
           index={index}
