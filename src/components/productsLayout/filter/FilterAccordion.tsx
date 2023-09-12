@@ -8,7 +8,11 @@ import * as Accordion from "@radix-ui/react-accordion";
 import { motion, AnimatePresence } from "framer-motion";
 
 //Hero Icons Imports
-import { MinusIcon, PlusIcon } from "@heroicons/react/20/solid";
+import {
+  MinusIcon,
+  PlusIcon,
+  ChevronDownIcon,
+} from "@heroicons/react/20/solid";
 
 interface FiltersAccordionProps {
   index: number;
@@ -45,8 +49,8 @@ const FilterAccordion = ({
           >
             <h3 className="font-medium text-black ">{category.fields.name}</h3>
             <div className="relative ml-6 flex h-5 w-5 items-center">
-              <MinusIcon className="absolute hidden h-full w-full group-data-[state=open]:block " />
-              <PlusIcon className="absolute h-full w-full group-data-[state=open]:hidden" />
+              <MinusIcon className="absolute h-full w-full  " />
+              <PlusIcon className="absolute h-full w-full transition-all duration-300 group-data-[state=open]:opacity-0" />
             </div>
           </Accordion.Trigger>
         </Accordion.Header>
@@ -54,31 +58,32 @@ const FilterAccordion = ({
           {open && (
             <Accordion.Content forceMount className="overflow-hidden">
               <motion.div
-                className="flex flex-col gap-2"
                 variants={accordionContentVariants}
                 initial="closed"
                 animate={`${open ? "open" : "closed"}`}
                 exit="closed"
               >
-                <Link
-                  href={`/products/${category.fields.slug}`}
-                  className="text-sm text-gray-600"
-                >{`All ${category.fields.name} `}</Link>
-                {subCategories.map((subCategory: any) => {
-                  return (
-                    <Fragment key={subCategory.sys.id}>
-                      {category.fields.slug ===
-                      subCategory.fields.category.fields.slug ? (
-                        <Link
-                          href={`/products/${category.fields.slug}/${subCategory.fields.slug}`}
-                          className="text-sm text-gray-600"
-                        >
-                          {subCategory.fields.name}
-                        </Link>
-                      ) : null}
-                    </Fragment>
-                  );
-                })}
+                <div className="flex flex-col gap-2 pt-6">
+                  <Link
+                    href={`/products/${category.fields.slug}`}
+                    className="text-sm text-gray-600"
+                  >{`All ${category.fields.name} `}</Link>
+                  {subCategories.map((subCategory: any) => {
+                    return (
+                      <Fragment key={subCategory.sys.id}>
+                        {category.fields.slug ===
+                        subCategory.fields.category.fields.slug ? (
+                          <Link
+                            href={`/products/${category.fields.slug}/${subCategory.fields.slug}`}
+                            className="text-sm text-gray-600"
+                          >
+                            {subCategory.fields.name}
+                          </Link>
+                        ) : null}
+                      </Fragment>
+                    );
+                  })}
+                </div>
               </motion.div>
             </Accordion.Content>
           )}
