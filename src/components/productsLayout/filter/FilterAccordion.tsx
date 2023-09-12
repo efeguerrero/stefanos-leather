@@ -18,6 +18,7 @@ interface FiltersAccordionProps {
   index: number;
   category: any;
   subCategories: any;
+  handleMenuLinkClick: () => void;
 }
 
 const accordionContentVariants = {
@@ -33,6 +34,7 @@ const FilterAccordion = ({
   category,
   subCategories,
   index,
+  handleMenuLinkClick,
 }: FiltersAccordionProps) => {
   const [open, setOpen] = React.useState(false);
 
@@ -65,6 +67,7 @@ const FilterAccordion = ({
               >
                 <div className="flex flex-col gap-2 pt-6">
                   <Link
+                    onClick={() => handleMenuLinkClick()}
                     href={`/products/${category.fields.slug}`}
                     className="text-sm text-gray-600"
                   >{`All ${category.fields.name} `}</Link>
@@ -74,6 +77,7 @@ const FilterAccordion = ({
                         {category.fields.slug ===
                         subCategory.fields.category.fields.slug ? (
                           <Link
+                            onClick={() => handleMenuLinkClick()}
                             href={`/products/${category.fields.slug}/${subCategory.fields.slug}`}
                             className="text-sm text-gray-600"
                           >
