@@ -44,6 +44,7 @@ const ProductsLayout = ({ children }: LayoutProps) => {
   const [subCategories, setSubCategories] = useState<Entry[]>([]);
 
   useEffect(() => {
+    console.log("filters re rendered");
     const getFiltersData = async () => {
       const categories = await contentfulClient.getEntries<Categories>({
         content_type: "categories",

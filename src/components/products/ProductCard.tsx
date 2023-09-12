@@ -1,5 +1,8 @@
 import React from "react";
 
+//Next Imports
+import Link from "next/link";
+
 interface ProductCardProps {
   product: any;
 }
@@ -9,7 +12,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
   const { id } = product.sys;
 
   return (
-    <a href={`/item/${id}/${slug}`} className="group">
+    <Link href={`/item/${id}/${slug}`} className="group">
       <div className=" bg-gray-200 aspect-[4/5] w-full overflow-hidden rounded-lg">
         <img
           src={coverImage.fields.file.url}
@@ -18,7 +21,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
         />
       </div>
       <h3 className="text-gray-700 mt-4 text-sm">{name}</h3>
-    </a>
+    </Link>
   );
 };
 
