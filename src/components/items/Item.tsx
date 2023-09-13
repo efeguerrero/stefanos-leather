@@ -14,8 +14,8 @@ const Item = ({ product }: ItemProps) => {
 
   return (
     <div className="grid gap-2 lg:grid-cols-2 lg:px-12">
-      <Info product={product} />
       <Gallery images={product.fields.images} />
+      <Info product={product} />
     </div>
   );
 };

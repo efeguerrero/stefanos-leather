@@ -60,7 +60,7 @@ export default function Nav() {
   const menuIcon = {
     initial: {
       backgroundColor: "#fff",
-      padding: "1rem",
+      padding: "0rem",
     },
 
     sticky: {
@@ -72,7 +72,7 @@ export default function Nav() {
 
   const logoImg = {
     initial: {
-      opacity: 0,
+      opacity: 1,
     },
     mobileVisible: {
       opacity: 1,
@@ -91,13 +91,13 @@ export default function Nav() {
   return (
     <motion.section
       id="navContainer"
-      className="fixed inset-x-0 top-0 z-[11] flex w-[100vw] items-center justify-between bg-transparent px-6 py-6 lg:justify-end lg:px-12 lg:py-10"
+      className="container absolute inset-x-0 top-0 z-[11] flex w-[100vw] items-center justify-between bg-transparent pb-6 pt-8 "
     >
       <motion.div
         initial="initial"
-        animate={isSticky ? "initial" : "mobileVisible"}
+        animate="initial"
         variants={logoImg}
-        className="mr-auto grow basis-0 lg:hidden "
+        className=" "
       >
         <img src={logo.src} alt="Brand Logo" className="h-8 w-auto" />
       </motion.div>
@@ -108,7 +108,7 @@ export default function Nav() {
             <Dialog.Trigger>
               <motion.div
                 variants={menuIcon}
-                animate={isSticky ? "sticky" : "initial"}
+                animate="initial"
                 whileHover="hover"
                 id="menuIcon"
                 className="group flex aspect-square cursor-pointer flex-col items-center justify-center rounded-full"
@@ -121,8 +121,8 @@ export default function Nav() {
                     },
                   }}
                   className="  block h-[2px] w-[1.8rem] rounded-sm bg-black "
-                ></motion.div>
-                <motion.div className="my-[7px] block h-[2px] w-[1.8rem] rounded-sm bg-black "></motion.div>
+                />
+                <motion.div className="my-[7px] block h-[2px] w-[1.8rem] rounded-sm bg-black " />
                 <motion.div
                   layoutId="line2"
                   variants={{
@@ -131,7 +131,7 @@ export default function Nav() {
                     },
                   }}
                   className=" block h-[2px] w-[1.8rem] rounded-sm bg-black"
-                ></motion.div>
+                />
               </motion.div>
             </Dialog.Trigger>
             <AnimatePresence>

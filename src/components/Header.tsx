@@ -12,7 +12,7 @@ const images = [
 const Header = () => {
   return (
     <>
-      <header className="relative h-[100svh] overflow-hidden bg-white px-6 pt-24 lg:px-0 lg:pt-0">
+      <header className="relative h-[100svh] overflow-hidden bg-white px-6 pt-24 lg:px-0  lg:pb-[0.5rem] lg:pt-[4.5rem]">
         <section className="flex h-full w-full flex-col items-center justify-end gap-14">
           <div className="z-10 flex w-full grow items-center justify-start lg:hidden lg:grow-0">
             <h2 className="w-full text-left font-extrabold uppercase leading-[1.1] tracking-normal text-black [font-size:clamp(1rem_,13vw_,3.5rem)] md:text-center lg:text-left">
@@ -22,25 +22,26 @@ const Header = () => {
           {/* desktop Img Grid */}
           <div
             id="imageGrid"
-            className="hidden h-[40%] w-[110vw] grow auto-rows-[100%] grid-cols-5 justify-center gap-6 lg:grid"
+            className=" container hidden h-[40%] w-[100vw] grow auto-rows-[100%] grid-cols-5 justify-center gap-6 lg:grid "
           >
             <Image
               src={images[0]}
               width={600}
               height={900}
               alt="Living Room Photo"
-              className="h-[95%] w-full self-center rounded-lg object-cover"
+              className="h-[93%]  w-full self-center rounded-lg object-cover"
             />
             <div>
-              <h2 className="col-start-2 mt-4 text-left text-[3.5vw] font-extrabold uppercase leading-[1] tracking-normal text-black">
+              <h2 className="col-start-2 mt-4 text-left text-[3vw] font-extrabold uppercase leading-[1] tracking-normal text-black">
                 Argentine leather to the world
               </h2>
+
               <Image
                 src={images[1]}
                 width={600}
                 height={900}
                 alt="Living Room Photo"
-                className="mt-8 h-[60%] w-full rounded-lg object-cover"
+                className="mt-8 h-[65%] w-full rounded-lg object-cover"
               />
             </div>
             <Image
@@ -49,15 +50,16 @@ const Header = () => {
               src={images[2]}
               priority
               alt="Living Room Photo"
-              className="h-[90%] w-full -translate-y-[2rem] self-end rounded-lg object-cover"
+              className="h-[92%] w-full -translate-y-[2rem] self-end rounded-lg object-cover"
             />
+
             <div className="flex h-full flex-col gap-6">
               <Image
                 src={images[3]}
                 width={600}
                 height={900}
                 alt="Living Room Photo"
-                className="h-[50%] w-full grow self-start rounded-lg object-cover"
+                className=" h-[50%] w-full grow self-start rounded-lg object-cover"
               />
               <h2 className="font-regular f col-start-2 pb-12 text-left text-sm tracking-tighter text-black">
                 <span className="text-xl font-extrabold uppercase tracking-tight">
@@ -76,7 +78,7 @@ const Header = () => {
               width={600}
               height={900}
               alt="Living Room Photo"
-              className="h-[85%] w-full -translate-y-[0.5rem] self-end rounded-lg object-cover"
+              className="h-[92%] w-full -translate-y-[0.5rem] self-center rounded-lg object-cover"
             />
           </div>
           {/* mobile Img Grid */}
