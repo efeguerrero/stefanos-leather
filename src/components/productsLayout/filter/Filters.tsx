@@ -7,9 +7,6 @@ import Link from "next/link";
 //Component Imports
 import FilterAccordion from "./FilterAccordion";
 
-//Framer Motion imports
-import { motion } from "framer-motion";
-
 interface FiltersProps {
   filterOptions: {
     name: string;

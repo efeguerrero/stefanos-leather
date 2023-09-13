@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 
 //Next Imports
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 //Radix Imports
 import * as Accordion from "@radix-ui/react-accordion";
@@ -36,7 +37,14 @@ const FilterAccordion = ({
   handleMenuLinkClick,
   activeLink,
 }: FiltersAccordionProps) => {
-  const [open, setOpen] = React.useState(false);
+  const router = useRouter();
+
+  const [open, setOpen] = React.useState(() => {
+    if (router.query.category === category.fields.slug) {
+      return true;
+    }
+    return false;
+  });
 
   const active: boolean = activeLink === `/products/${category.fields.slug}`;
 
@@ -53,8 +61,11 @@ const FilterAccordion = ({
           >
             <h3 className="font-medium text-black ">{category.fields.name}</h3>
             <div className="relative ml-6 flex h-5 w-5 items-center">
-              <MinusIcon className="absolute h-full w-full  " />
-              <PlusIcon className="absolute h-full w-full transition-all duration-300 group-data-[state=open]:opacity-0" />
+              {open ? (
+                <MinusIcon className="absolute h-full w-full" />
+              ) : (
+                <PlusIcon className="absolute h-full w-full transition-all duration-300 " />
+              )}
             </div>
           </Accordion.Trigger>
         </Accordion.Header>
