@@ -26,8 +26,8 @@ const sortOptions = [
 ];
 const filterOptions = [
   { name: "All Products", href: "/products" },
-  { name: "Most Popular", href: "/products" },
-  { name: "New In!", href: "/products" },
+  { name: "Most Popular", href: "/products/backpacks" },
+  { name: "New In!", href: "/products/new" },
 ];
 
 function classNames(...classes: any) {

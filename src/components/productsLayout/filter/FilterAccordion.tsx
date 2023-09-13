@@ -1,4 +1,6 @@
 import React, { Fragment } from "react";
+
+//Next Imports
 import Link from "next/link";
 
 //Radix Imports
@@ -8,18 +10,7 @@ import * as Accordion from "@radix-ui/react-accordion";
 import { motion, AnimatePresence } from "framer-motion";
 
 //Hero Icons Imports
-import {
-  MinusIcon,
-  PlusIcon,
-  ChevronDownIcon,
-} from "@heroicons/react/20/solid";
-
-interface FiltersAccordionProps {
-  index: number;
-  category: any;
-  subCategories: any;
-  handleMenuLinkClick: () => void;
-}
+import { MinusIcon, PlusIcon } from "@heroicons/react/20/solid";
 
 const accordionContentVariants = {
   open: {
@@ -30,13 +21,24 @@ const accordionContentVariants = {
   },
 };
 
+interface FiltersAccordionProps {
+  index: number;
+  category: any;
+  subCategories: any;
+  handleMenuLinkClick: (a: HTMLAnchorElement) => void;
+  activeLink: string;
+}
+
 const FilterAccordion = ({
   category,
   subCategories,
   index,
   handleMenuLinkClick,
+  activeLink,
 }: FiltersAccordionProps) => {
   const [open, setOpen] = React.useState(false);
+
+  const active: boolean = activeLink === `/products/${category.fields.slug}`;
 
   return (
     <Accordion.Root asChild type="multiple" key={category.sys.id}>
@@ -58,28 +60,43 @@ const FilterAccordion = ({
         </Accordion.Header>
         <AnimatePresence>
           {open && (
-            <Accordion.Content forceMount className="overflow-hidden">
+            <Accordion.Content forceMount>
               <motion.div
                 variants={accordionContentVariants}
                 initial="closed"
                 animate={`${open ? "open" : "closed"}`}
                 exit="closed"
+                className="overflow-y-hidden"
               >
                 <div className="flex flex-col gap-2 pt-6">
-                  <Link
-                    onClick={() => handleMenuLinkClick()}
-                    href={`/products/${category.fields.slug}`}
-                    className="text-sm text-gray-600"
-                  >{`All ${category.fields.name} `}</Link>
+                  <div className="relative">
+                    <Link
+                      onClick={(e) => handleMenuLinkClick(e.currentTarget)}
+                      href={`/products/${category.fields.slug}`}
+                      className={`${
+                        active ? "text-bravo" : "text-gray-600"
+                      } text-sm transition-colors duration-200`}
+                    >
+                      {`All ${category.fields.name} `}
+                    </Link>
+                  </div>
                   {subCategories.map((subCategory: any) => {
+                    const active =
+                      activeLink ===
+                      `/products/${category.fields.slug}/${subCategory.fields.slug}`;
+
                     return (
                       <Fragment key={subCategory.sys.id}>
                         {category.fields.slug ===
                         subCategory.fields.category.fields.slug ? (
                           <Link
-                            onClick={() => handleMenuLinkClick()}
+                            onClick={(e) =>
+                              handleMenuLinkClick(e.currentTarget)
+                            }
                             href={`/products/${category.fields.slug}/${subCategory.fields.slug}`}
-                            className="text-sm text-gray-600"
+                            className={`${
+                              active ? "text-bravo" : "text-gray-600"
+                            } text-sm transition-colors duration-200`}
                           >
                             {subCategory.fields.name}
                           </Link>
