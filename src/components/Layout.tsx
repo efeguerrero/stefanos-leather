@@ -1,3 +1,5 @@
+//Component Imports
+import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
 
 interface LayoutProps {
@@ -9,7 +11,7 @@ const Layout = ({ children }: LayoutProps) => {
     <>
       <Nav />
       <main>{children}</main>
-      {/* <Footer/> */}
+      <Footer />
     </>
   );
 };

@@ -8,7 +8,7 @@ interface CategoriesGridProps {
 
 const CategoriesGrid = ({ categories }: CategoriesGridProps) => {
   return (
-    <div className="bg-gray-100">
+    <div className="mx-auto max-w-7xl">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
           <h2 className="text-gray-900 text-4xl font-bold">Our Products</h2>

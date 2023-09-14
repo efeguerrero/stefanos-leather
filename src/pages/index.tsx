@@ -5,6 +5,7 @@ import { contentfulClient, Categories } from "@/lib/contentful";
 import Header from "@/components/Header";
 import CategoriesGrid from "@/components/categories/CategoriesGrid";
 import Layout from "@/components/Layout";
+import Shipping from "@/components/Shipping";
 
 //Types Imports
 import type { NextPageWithLayout } from "./_app";
@@ -36,6 +37,7 @@ const Home = ({ categories }: HomeProps) => {
     <>
       <Header />
       <CategoriesGrid categories={categories} />
+      <Shipping />
     </>
   );
 };
