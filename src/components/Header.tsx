@@ -121,7 +121,7 @@ const Header = () => {
         </section>
       </header>
 
-      <section className="container my-16 flex min-h-[50svh] items-center justify-center">
+      <section className="container my-16 flex min-h-[50svh] items-center justify-center sm:hidden">
         <h2 className="font-regular w-full text-left text-base tracking-tighter text-black">
           <span className="mb-2 text-4xl font-extrabold uppercase tracking-tight">
             We are Stefanos Leather.
