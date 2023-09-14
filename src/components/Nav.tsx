@@ -91,7 +91,7 @@ export default function Nav() {
   return (
     <motion.section
       id="navContainer"
-      className="container absolute inset-x-0 top-0 z-[11] flex w-[100vw] items-center justify-between bg-transparent pb-6 pt-8 "
+      className="container absolute inset-x-0 top-0 z-[11] flex  items-center justify-between bg-transparent pb-6 pt-8 "
     >
       <motion.div
         initial="initial"

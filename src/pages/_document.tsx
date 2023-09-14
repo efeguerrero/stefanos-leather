@@ -5,7 +5,9 @@ import { inter } from "./_app";
 export default function Document() {
   return (
     <Html lang="en">
-      <Head></Head>
+      <Head>
+        <title>Stefanos Leather</title>
+      </Head>
       <body className={`${inter.variable} scroll-smooth font-inter`}>
         <Main />
         <NextScript />
