@@ -14,8 +14,8 @@ const Header = () => {
     <>
       <header className="relative h-[100svh] overflow-hidden bg-white pt-28 sm:px-6 sm:pb-6 lg:px-0 lg:pb-[0.5rem] lg:pt-[6rem]">
         <section className="flex h-full w-full flex-col items-center justify-center gap-2 sm:justify-end sm:gap-14">
-          <div className="@container flex w-full items-center justify-start px-6 sm:hidden sm:px-0">
-            <h2 className="@[1rem]:[font-size:clamp(1rem_,16cqw_,3.4rem)] w-full text-left font-extrabold uppercase leading-[1.1] tracking-normal text-black ">
+          <div className="flex w-full items-center justify-start px-6 @container sm:hidden sm:px-0">
+            <h2 className="w-full text-left font-extrabold uppercase leading-[1.1] tracking-normal text-black @[1rem]:[font-size:clamp(1rem_,16cqw_,3.4rem)] ">
               Argentine leather <br /> to the world
             </h2>
           </div>
@@ -33,8 +33,8 @@ const Header = () => {
                 className="h-full min-h-0 rounded-lg object-cover"
               />
             </div>
-            <div className="@container flex h-full flex-col justify-start gap-6 pb-3">
-              <h2 className="@[1rem]:text-[17cqw] text-left font-extrabold uppercase leading-[1] tracking-normal text-black">
+            <div className="flex h-full flex-col justify-start gap-6 pb-3 @container">
+              <h2 className="text-left font-extrabold uppercase leading-[1] tracking-normal text-black @[1rem]:text-[17cqw]">
                 Argentine leather to the world
               </h2>
               <Image
