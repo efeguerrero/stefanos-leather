@@ -99,7 +99,9 @@ export default function Nav() {
         variants={logoImg}
         className=" "
       >
-        <img src={logo.src} alt="Brand Logo" className="h-8 w-auto" />
+        <Link href="/">
+          <img src={logo.src} alt="Brand Logo" className="h-8 w-auto" />
+        </Link>
       </motion.div>
       <motion.nav className="flex w-max items-center justify-center  ">
         {/* //Mobile Menu */}
@@ -160,11 +162,13 @@ export default function Nav() {
                             variants={logoImg}
                             className="bottom-10 hidden lg:bottom-20 lg:right-20 lg:block  "
                           >
-                            <img
-                              src={logo.src}
-                              alt="Brand Logo"
-                              className="h-10 w-auto"
-                            />
+                            <Link href="/" onClick={() => setIsMenuOpen(false)}>
+                              <img
+                                src={logo.src}
+                                alt="Brand Logo"
+                                className="h-10 w-auto"
+                              />
+                            </Link>
                           </motion.div>
                           <div className=" top-10 flex flex-col items-center gap-4 lg:right-20 lg:top-20 lg:flex-row lg:justify-center">
                             <Dialog.Close asChild>
