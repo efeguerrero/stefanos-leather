@@ -55,7 +55,6 @@ const MenuDialog = () => {
               className="group flex aspect-square cursor-pointer flex-col items-center justify-center rounded-full"
             >
               <motion.div
-                layoutId="line1"
                 variants={{
                   hover: {
                     x: "10px",
@@ -65,7 +64,6 @@ const MenuDialog = () => {
               />
               <motion.div className="my-[7px] block h-[2px] w-[1.8rem] rounded-sm bg-black " />
               <motion.div
-                layoutId="line2"
                 variants={{
                   hover: {
                     x: "-10px",
@@ -124,14 +122,12 @@ const MenuDialog = () => {
                             ></motion.circle>
                           </motion.svg>
                           <motion.div
-                            layoutId="line1"
                             animate={{
                               rotate: 45,
                             }}
                             className="absolute my-[7px] h-[2px] w-[1.8rem] -translate-y-[50%] rounded-sm bg-black "
                           ></motion.div>
                           <motion.div
-                            layoutId="line2"
                             animate={{
                               rotate: -45,
                             }}

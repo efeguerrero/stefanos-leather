@@ -14,7 +14,7 @@ import Filters from "@/components/productsLayout/filter/Filters";
 import FilterDialog from "@/components/productsLayout/filter/FilterDialog";
 import FilterTigger from "@/components/productsLayout/filter/FilterTrigger";
 import Logo from "@/components/nav/Logo";
-import MenuDialog2 from "@/components/nav/MenuDialog2";
+import MenuDialog from "@/components/nav/MenuDialog";
 import Footer from "@/components/Footer";
 
 const filterOptions = [
@@ -74,7 +74,7 @@ const ProductsLayout = ({ children }: LayoutProps) => {
               <FilterTigger setMobileFiltersOpen={setMobileFiltersOpen} />
             </div>
             <Logo />
-            <MenuDialog2 />
+            <MenuDialog />
             {/* End of filter Button for mobile View */}
           </div>
           {/* Desktop View - Including Products */}

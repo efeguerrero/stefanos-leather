@@ -12,12 +12,7 @@ import logo from "/public/assets/images/brand/logo.png";
 const Logo = () => {
   return (
     <Link href="/">
-      <motion.img
-        layoutId="brandLogo"
-        src={logo.src}
-        alt="Brand Logo"
-        className="h-8 w-auto"
-      />
+      <motion.img src={logo.src} alt="Brand Logo" className="h-8 w-auto" />
     </Link>
   );
 };
