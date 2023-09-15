@@ -12,9 +12,9 @@ const images = [
 const Header = () => {
   return (
     <>
-      <header className="relative h-[100svh] overflow-hidden bg-white pt-28 sm:px-6 sm:pb-6 lg:px-0 lg:pb-[0.5rem] lg:pt-[6rem]">
+      <header className="container relative h-[100svh] max-w-7xl overflow-hidden bg-white pt-28 lg:pt-[6rem]">
         <section className="flex h-full w-full flex-col items-center justify-center gap-2 sm:justify-end sm:gap-14">
-          <div className="flex w-full items-center justify-start px-6 @container sm:hidden sm:px-0">
+          <div className="flex w-full items-center justify-start @container sm:hidden">
             <h2 className="w-full text-left font-extrabold uppercase leading-[1.1] tracking-normal text-black @[1rem]:[font-size:clamp(1rem_,16cqw_,3.4rem)] ">
               Argentine leather <br /> to the world
             </h2>
@@ -22,9 +22,9 @@ const Header = () => {
           {/* desktop Img Grid */}
           <div
             id="imageGrid"
-            className="container hidden h-full grow auto-rows-[100%] justify-center gap-6 sm:grid sm:grid-cols-2 lg:grid-cols-4 2xl:grid-cols-5 "
+            className=" hidden h-full  grow auto-rows-[100%] justify-center gap-6 sm:grid sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3 "
           >
-            <div className="hidden h-full pb-6 lg:block">
+            <div className="hidden h-full pb-6 lg:hidden">
               <Image
                 src={images[0]}
                 width={600}
@@ -74,7 +74,7 @@ const Header = () => {
                 delectus tenetur doloremque sed, accusamus consequatur rerum.
               </h2>
             </div>
-            <div className="hidden h-full pb-3 pt-6 2xl:block">
+            <div className="hidden h-full pb-3 pt-6 2xl:hidden">
               <Image
                 src={images[4]}
                 width={600}
@@ -87,7 +87,7 @@ const Header = () => {
           {/* mobile Img Grid */}
           <div
             id="imageGrid"
-            className="grid w-full grow grid-cols-3 gap-2 px-2 pb-8 sm:hidden"
+            className="grid w-full grow grid-cols-3 gap-2 pb-8 sm:hidden"
           >
             <div className="h-full pt-12">
               <Image
@@ -121,11 +121,12 @@ const Header = () => {
         </section>
       </header>
 
-      <section className="container my-16 flex min-h-[50svh] items-center justify-center sm:hidden">
+      <section className="container flex items-center justify-center py-24 sm:hidden lg:py-32">
         <h2 className="font-regular w-full text-left text-base tracking-tighter text-black">
           <span className="mb-2 text-4xl font-extrabold uppercase tracking-tight">
             We are Stefanos Leather.
           </span>
+          <br />
           <br />
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae
           sint deserunt autem fuga, a soluta accusantium tempora quaerat

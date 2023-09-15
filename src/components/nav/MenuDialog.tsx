@@ -122,19 +122,9 @@ const MenuDialog = () => {
                 exit={{ opacity: 0 }}
                 className="fixed inset-0 z-50 h-[100dvh] w-full bg-white"
               >
-                <section className="container relative flex h-full flex-col items-center justify-around py-16">
-                  <div className="flex w-full items-center justify-center lg:justify-between">
-                    {/* <motion.div className="hidden lg:block">
-                      <Link href="/" onClick={() => setIsMenuOpen(false)}>
-                        <motion.img
-                          layoutId="brandLogo"
-                          src={logo.src}
-                          alt="Brand Logo"
-                          className="absolute h-8 w-auto"
-                        />
-                      </Link>
-                    </motion.div> */}
-                    <div className=" top-10 flex flex-col items-center gap-4 lg:right-20 lg:top-20 lg:flex-row lg:justify-center">
+                <section className="container relative flex h-full max-w-7xl flex-col items-center justify-around py-16">
+                  <div className="flex w-full items-center justify-center lg:justify-end">
+                    <div className="top-10 flex flex-col items-center gap-4 lg:right-20 lg:top-20 lg:flex-row lg:justify-center">
                       <Dialog.Close asChild>
                         <motion.div
                           id="menuCloseIcon"

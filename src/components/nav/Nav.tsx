@@ -1,6 +1,3 @@
-import { useState, useRef } from "react";
-import Link from "next/link";
-
 //Component Imports
 import Logo from "@/components/nav/Logo";
 import MenuDialog from "@/components/nav/MenuDialog";
@@ -20,7 +17,7 @@ export default function Nav() {
   return (
     <motion.section
       id="navContainer"
-      className="container absolute inset-x-0 top-0 z-[11] flex  items-center justify-between bg-transparent pb-6 pt-8 "
+      className="container absolute inset-x-0 top-0 z-[11] flex max-w-7xl items-center justify-between bg-transparent px-8 pb-6 pt-8"
     >
       <Logo />
       <motion.nav className="flex w-max items-center justify-center  ">
