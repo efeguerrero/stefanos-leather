@@ -1,6 +1,6 @@
 //Component Imports
 import Footer from "@/components/Footer";
-import Nav from "@/components/Nav";
+import Nav from "@/components/nav/Nav";
 
 interface LayoutProps {
   children: React.ReactNode;

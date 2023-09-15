@@ -12,7 +12,7 @@ const FilterTrigger = ({ setMobileFiltersOpen }: FilterTriggerProps) => {
   return (
     <button
       type="button"
-      className="-m-2 ml-4  text-gray-400 hover:text-gray-500 sm:ml-6"
+      className=" grid place-items-center text-gray-400 hover:text-gray-500"
       onClick={() => setMobileFiltersOpen(true)}
     >
       <span className="sr-only">Filters</span>

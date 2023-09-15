@@ -5,7 +5,6 @@ import ProductGrid from "@/components/products/ProductGrid";
 
 //Layout Import
 import ProductsLayout from "@/components/productsLayout/ProductsLayout";
-import Layout from "@/components/Layout";
 
 //Contentful Client Import
 import {
@@ -70,11 +69,7 @@ const CategoryProducts = ({ products }: CategoryProductsProps) => {
 };
 
 CategoryProducts.getLayout = function getLayout(page: ReactElement) {
-  return (
-    <Layout>
-      <ProductsLayout>{page}</ProductsLayout>
-    </Layout>
-  );
+  return <ProductsLayout>{page}</ProductsLayout>;
 };
 
 export default CategoryProducts;

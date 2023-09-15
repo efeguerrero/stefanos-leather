@@ -13,6 +13,8 @@ import { Entry } from "contentful";
 import Filters from "@/components/productsLayout/filter/Filters";
 import FilterDialog from "@/components/productsLayout/filter/FilterDialog";
 import FilterTigger from "@/components/productsLayout/filter/FilterTrigger";
+import Logo from "@/components/nav/Logo";
+import MenuDialog from "@/components/nav/MenuDialog";
 
 const filterOptions = [
   { name: "All Products", href: "/products" },
@@ -63,19 +65,22 @@ const ProductsLayout = ({ children }: LayoutProps) => {
       />
       {/* End of mobile filter dialog */}
 
-      <main className="mx-auto  max-w-7xl lg:pt-32">
+      <main className="mx-auto  max-w-7xl">
         <div className="container">
-          <div className="flex items-baseline justify-between border-gray-300  pb-6 pt-28 lg:hidden">
+          <div className="sticky inset-x-0 top-0 z-[11] flex items-center justify-between bg-white/50 pb-6 pt-8 backdrop-blur-lg ">
             {/* Filter Button for mobile View */}
-            <FilterTigger setMobileFiltersOpen={setMobileFiltersOpen} />
+            <div className="lg:hidden">
+              <FilterTigger setMobileFiltersOpen={setMobileFiltersOpen} />
+            </div>
+            <Logo />
+            <MenuDialog />
             {/* End of filter Button for mobile View */}
           </div>
-
+          {/* Desktop View - Including Products */}
           <section
             aria-labelledby="products-heading"
-            className="pb-24 pt-8 lg:pt-16"
+            className="pb-24 pt-12 lg:pt-16"
           >
-            {/* Desktop View - Including Products */}
             <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
               {/* Desktop Filters */}
               <div className="hidden lg:block">
@@ -85,10 +90,11 @@ const ProductsLayout = ({ children }: LayoutProps) => {
                   subCategories={subCategories}
                 />
               </div>
-              {/* Product grid */}
+
               <div className="lg:col-span-3 lg:px-8">{children}</div>
             </div>
           </section>
+          {/* Product grid */}
         </div>
       </main>
     </div>

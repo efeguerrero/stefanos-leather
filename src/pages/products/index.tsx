@@ -1,6 +1,5 @@
 //Layout Import
 import ProductsLayout from "@/components/productsLayout/ProductsLayout";
-import Layout from "@/components/Layout";
 
 //Component Imports
 import ProductGrid from "@/components/products/ProductGrid";
@@ -51,9 +50,5 @@ export default function Products({ products }: ProductsProps) {
 }
 
 Products.getLayout = function getLayout(page: ReactElement) {
-  return (
-    <Layout>
-      <ProductsLayout>{page}</ProductsLayout>
-    </Layout>
-  );
+  return <ProductsLayout>{page}</ProductsLayout>;
 };
