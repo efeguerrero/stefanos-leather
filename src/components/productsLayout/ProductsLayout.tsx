@@ -90,7 +90,10 @@ const ProductsLayout = ({ children }: LayoutProps) => {
       <main className="mx-auto max-w-7xl">
         <div className="container">
           <div className="mb-6 flex items-center justify-between border-b-[1px] border-gray-200 py-3">
-            <BreadCrumbs />
+            <BreadCrumbs
+              categories={categories}
+              subCategories={subCategories}
+            />
             <FilterTigger setMobileFiltersOpen={setMobileFiltersOpen} />
           </div>
           {/* <div className="sticky inset-x-0 top-0 z-[11] flex items-center justify-between bg-white/50 pb-6 pt-8 backdrop-blur-lg "> */}
