@@ -21,6 +21,7 @@ import {
 import Filters from "@/components/productsLayout/filter/Filters";
 import FilterDialog from "@/components/productsLayout/filter/FilterDialog";
 import FilterTigger from "@/components/productsLayout/filter/FilterTrigger";
+import BreadCrumbs from "@/components/productsLayout/BreadCrumbs";
 
 const filterOptions = [
   { name: "All Products", href: "/products" },
@@ -42,9 +43,6 @@ const ProductsLayout = ({ children }: LayoutProps) => {
   const { scrollY } = useScroll();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    console.log("latest", latest);
-    console.log("RefY", Yposition.current);
-
     if (latest - Yposition.current > 30) {
       setFilterPresent(false);
       Yposition.current = latest;
@@ -64,9 +62,9 @@ const ProductsLayout = ({ children }: LayoutProps) => {
         content_type: "subCategories",
       });
 
-      const products = await contentfulClient.getEntries<Products>({
-        content_type: "products",
-      });
+      // const products = await contentfulClient.getEntries<Products>({
+      //   content_type: "products",
+      // });
 
       categories.items ? setCategories(categories.items) : setCategories([]);
       subCategories.items
@@ -91,6 +89,10 @@ const ProductsLayout = ({ children }: LayoutProps) => {
 
       <main className="mx-auto max-w-7xl">
         <div className="container">
+          <div className="mb-6 flex items-center justify-between border-b-[1px] border-gray-200 py-3">
+            <BreadCrumbs />
+            <FilterTigger setMobileFiltersOpen={setMobileFiltersOpen} />
+          </div>
           {/* <div className="sticky inset-x-0 top-0 z-[11] flex items-center justify-between bg-white/50 pb-6 pt-8 backdrop-blur-lg "> */}
           {/* Filter Button for mobile View */}
           <AnimatePresence>
@@ -125,7 +127,7 @@ const ProductsLayout = ({ children }: LayoutProps) => {
           {/* Desktop View - Including Products */}
           <section
             aria-labelledby="products-heading"
-            className="pb-24 pt-12 lg:pt-16"
+            className="pb-24 pt-3 lg:pt-16"
           >
             <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
               {/* Desktop Filters */}

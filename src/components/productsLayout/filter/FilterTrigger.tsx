@@ -12,11 +12,11 @@ const FilterTrigger = ({ setMobileFiltersOpen }: FilterTriggerProps) => {
   return (
     <button
       type="button"
-      className=" grid place-items-center text-white/60 "
+      className="grid place-items-center text-gray-400 "
       onClick={() => setMobileFiltersOpen(true)}
     >
       <span className="sr-only">Filters</span>
-      <FunnelIcon className="h-7 w-7" aria-hidden="true" />
+      <FunnelIcon className="h-5 w-5" aria-hidden="true" />
     </button>
   );
 };

@@ -12,16 +12,38 @@ import Layout from "@/components/Layout";
 import Item from "@/components/items/Item";
 
 //Contentful Client Import
-import { contentfulClient, Products } from "@/lib/contentful";
+import {
+  contentfulClient,
+  Products,
+  Categories,
+  SubCategories,
+} from "@/lib/contentful";
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const products = await contentfulClient.getEntries<Products>({
     content_type: "products",
   });
 
-  const paths = products.items.map((product) => ({
-    params: { slug: product.fields.slug, id: product.sys.id },
-  }));
+  const promiseArray = products.items.map(async (product) => {
+    const categoryID = product.fields.category.sys.id;
+    const category = await contentfulClient.getEntry<Categories>(categoryID);
+    const categorySlug = category.fields.slug;
+    const subCategoryID = product.fields.subCategory.sys.id;
+    const subCategory =
+      await contentfulClient.getEntry<SubCategories>(subCategoryID);
+    const subCategorySlug = subCategory.fields.slug;
+
+    return {
+      params: {
+        category: categorySlug,
+        subCategory: subCategorySlug,
+        id: product.sys.id,
+        slug: product.fields.slug,
+      },
+    };
+  });
+
+  const paths = await Promise.all(promiseArray);
 
   return {
     paths,
