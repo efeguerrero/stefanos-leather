@@ -15,7 +15,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="mx-auto max-w-7xl py-12">
+    <footer className="mx-auto mt-auto w-full max-w-7xl pb-4 pt-12">
       <div className="container flex flex-col items-center pb-4 pt-8 sm:flex-row">
         <Link
           className="title-font flex items-center justify-center font-medium text-gray-900 md:justify-start"

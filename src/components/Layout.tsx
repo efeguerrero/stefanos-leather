@@ -9,9 +9,11 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
   return (
     <>
-      <Nav />
-      <main>{children}</main>
-      <Footer />
+      <section className="flex min-h-[100dvh] flex-col">
+        <Nav />
+        <main>{children}</main>
+        <Footer />
+      </section>
     </>
   );
 };

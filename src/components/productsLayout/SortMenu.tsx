@@ -2,6 +2,14 @@ import React from "react";
 
 import { Menu } from "@headlessui/react";
 
+const sortOptions = [
+  { name: "Most Popular", href: "#", current: true },
+  { name: "Best Rating", href: "#", current: false },
+  { name: "Newest", href: "#", current: false },
+  { name: "Price: Low to High", href: "#", current: false },
+  { name: "Price: High to Low", href: "#", current: false },
+];
+
 const SortMenu = () => {
   return null;
   // <Menu as="div" className="relative inline-block text-left">

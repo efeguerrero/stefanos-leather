@@ -24,13 +24,13 @@ const navigation = [
 
 export default function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isSticky, setIsSticky] = useState(false);
+  // const [isSticky, setIsSticky] = useState(false);
 
-  const { scrollY } = useScroll();
+  // const { scrollY } = useScroll();
 
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    latest > 0 ? setIsSticky(true) : setIsSticky(false);
-  });
+  // useMotionValueEvent(scrollY, "change", (latest) => {
+  //   latest > 0 ? setIsSticky(true) : setIsSticky(false);
+  // });
 
   //Framer Motion Variants
 
@@ -93,12 +93,6 @@ export default function Nav() {
       id="navContainer"
       className="container absolute inset-x-0 top-0 z-[11] flex  items-center justify-between bg-transparent pb-6 pt-8 "
     >
-      {/* <motion.div
-        initial="initial"
-        animate="initial"
-        variants={logoImg}
-        className=" "
-      > */}
       <Link href="/">
         <motion.img
           layoutId="brandLogo"
@@ -107,7 +101,7 @@ export default function Nav() {
           className="h-8 w-auto"
         />
       </Link>
-      {/* </motion.div> */}
+
       <motion.nav className="flex w-max items-center justify-center  ">
         {/* //Mobile Menu */}
         <div className="flex gap-24">
@@ -250,29 +244,6 @@ export default function Nav() {
                                   }}
                                   className="relative my-4 flex items-center gap-2 [--opacity-small:0] lg:gap-6 lg:[--opacity-small:1] lg:[--translate-wide:-100vw]"
                                 >
-                                  {/* <motion.div
-                                    initial={{
-                                      scaleX: 0,
-                                      scaleY: 0,
-                                    }}
-                                    variants={{
-                                      hover: {
-                                        scaleX: 1,
-                                        scaleY: 1,
-
-                                        transition: {
-                                          backgroundColor: {
-                                            duration: 0,
-                                          },
-                                          duration: 0.3,
-
-                                          type: "tween",
-                                        },
-                                      },
-                                    }}
-                                    className="absolute left-[-20%] top-[50%] hidden h-[20px] w-[20px] -translate-y-[-50%] rounded-full bg-black lg:block "
-                                  ></motion.div> */}
-
                                   <motion.h3
                                     initial={{
                                       letterSpacing: "0.1rem",
