@@ -15,15 +15,15 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="body-font mx-auto max-w-7xl">
-      <div className="mx-auto flex flex-col items-center pb-4 pt-8 sm:flex-row">
+    <footer className="mx-auto max-w-7xl py-12">
+      <div className="container flex flex-col items-center pb-4 pt-8 sm:flex-row">
         <Link
-          className="title-font text-gray-900 flex items-center justify-center font-medium md:justify-start"
+          className="title-font flex items-center justify-center font-medium text-gray-900 md:justify-start"
           href="/"
         >
           <img src={logo.src} className="h-8 w-auto" alt="Brand Logo" />
         </Link>
-        <p className=" sm:border-gray-600 mt-4 text-sm sm:ml-4 sm:mt-0 sm:border-l-2 sm:py-2 sm:pl-4">
+        <p className=" mt-4 text-sm sm:ml-4 sm:mt-0 sm:border-l-2 sm:border-gray-600 sm:py-2 sm:pl-4">
           All Rights Reserved. ©<span id="yearHolder">{currentYear}</span>{" "}
           Stefanos Leather
         </p>
