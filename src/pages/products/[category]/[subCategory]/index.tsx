@@ -5,6 +5,7 @@ import type { ReactElement } from "react";
 
 //Layout Import
 import ProductsLayout from "@/components/productsLayout/ProductsLayout";
+import Layout from "@/components/Layout";
 
 //Contentful Client Import
 import {
@@ -82,7 +83,11 @@ const SubCategory = ({ products }: SubCategoryProductsProps) => {
 };
 
 SubCategory.getLayout = function getLayout(page: ReactElement) {
-  return <ProductsLayout>{page}</ProductsLayout>;
+  return (
+    <Layout>
+      <ProductsLayout>{page}</ProductsLayout>
+    </Layout>
+  );
 };
 
 export default SubCategory;

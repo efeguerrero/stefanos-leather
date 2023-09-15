@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 //Contentful Imports
 import {
@@ -9,13 +9,18 @@ import {
 } from "@/lib/contentful";
 import { Entry } from "contentful";
 
+//Framer Motion Imports
+import {
+  motion,
+  useScroll,
+  useMotionValueEvent,
+  AnimatePresence,
+} from "framer-motion";
+
 //Component Imports
 import Filters from "@/components/productsLayout/filter/Filters";
 import FilterDialog from "@/components/productsLayout/filter/FilterDialog";
 import FilterTigger from "@/components/productsLayout/filter/FilterTrigger";
-import Logo from "@/components/nav/Logo";
-import MenuDialog from "@/components/nav/MenuDialog";
-import Footer from "@/components/Footer";
 
 const filterOptions = [
   { name: "All Products", href: "/products" },
@@ -31,6 +36,24 @@ const ProductsLayout = ({ children }: LayoutProps) => {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
   const [categories, setCategories] = useState<Entry[]>([]);
   const [subCategories, setSubCategories] = useState<Entry[]>([]);
+  const [filterPresent, setFilterPresent] = useState(true);
+  const Yposition = useRef(0);
+
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    console.log("latest", latest);
+    console.log("RefY", Yposition.current);
+
+    if (latest - Yposition.current > 30) {
+      setFilterPresent(false);
+      Yposition.current = latest;
+    }
+    if (Yposition.current - latest > 30) {
+      setFilterPresent(true);
+      Yposition.current = latest;
+    }
+  });
 
   useEffect(() => {
     const getFiltersData = async () => {
@@ -55,7 +78,7 @@ const ProductsLayout = ({ children }: LayoutProps) => {
   }, []);
 
   return (
-    <section className="flex min-h-[100dvh] flex-col">
+    <section>
       {/* Mobile filter dialog */}
       <FilterDialog
         mobileFiltersOpen={mobileFiltersOpen}
@@ -68,15 +91,37 @@ const ProductsLayout = ({ children }: LayoutProps) => {
 
       <main className="mx-auto max-w-7xl">
         <div className="container">
-          <div className="sticky inset-x-0 top-0 z-[11] flex items-center justify-between bg-white/50 pb-6 pt-8 backdrop-blur-lg ">
-            {/* Filter Button for mobile View */}
-            <div className="lg:hidden">
-              <FilterTigger setMobileFiltersOpen={setMobileFiltersOpen} />
-            </div>
-            <Logo />
-            <MenuDialog />
-            {/* End of filter Button for mobile View */}
-          </div>
+          {/* <div className="sticky inset-x-0 top-0 z-[11] flex items-center justify-between bg-white/50 pb-6 pt-8 backdrop-blur-lg "> */}
+          {/* Filter Button for mobile View */}
+          <AnimatePresence>
+            {filterPresent && (
+              <motion.div
+                initial={{
+                  scale: 0,
+                  y: 50,
+                  x: 10,
+                }}
+                animate={{
+                  scale: 1,
+                  y: 0,
+                  x: 0,
+                }}
+                exit={{
+                  scale: 0,
+                  y: 50,
+                  x: 10,
+                }}
+                whileTap={{
+                  scale: 0.9,
+                }}
+                className=" fixed bottom-[3rem] right-[1.5rem] rounded-full bg-bravo p-4 shadow-[0px_3px_4px_rgba(0,0,0,0.2)] backdrop-blur-md lg:hidden"
+              >
+                <FilterTigger setMobileFiltersOpen={setMobileFiltersOpen} />
+              </motion.div>
+            )}
+          </AnimatePresence>
+          {/* End of filter Button for mobile View */}
+          {/* </div> */}
           {/* Desktop View - Including Products */}
           <section
             aria-labelledby="products-heading"
@@ -98,7 +143,6 @@ const ProductsLayout = ({ children }: LayoutProps) => {
           {/* Product grid */}
         </div>
       </main>
-      <Footer />
     </section>
   );
 };

@@ -7,6 +7,7 @@ import type { ReactElement } from "react";
 
 //Component Imports
 import ProductsLayout from "@/components/productsLayout/ProductsLayout";
+import Layout from "@/components/Layout";
 
 import Item from "@/components/items/Item";
 
@@ -50,7 +51,11 @@ const Product = ({ product }: ProductProps) => {
 };
 
 Product.getLayout = function getLayout(page: ReactElement) {
-  return <ProductsLayout>{page}</ProductsLayout>;
+  return (
+    <Layout>
+      <ProductsLayout>{page}</ProductsLayout>
+    </Layout>
+  );
 };
 
 export default Product;
