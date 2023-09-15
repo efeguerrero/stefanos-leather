@@ -89,7 +89,7 @@ const ProductsLayout = ({ children }: LayoutProps) => {
 
       <main className="mx-auto max-w-7xl">
         <div className="container">
-          <div className="mb-6 flex items-center justify-between border-b-[1px] border-gray-200 py-3">
+          <div className="mb-6 flex items-center justify-between border-b-[1px] border-gray-200 py-3 lg:hidden">
             <BreadCrumbs
               categories={categories}
               subCategories={subCategories}
