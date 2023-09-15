@@ -39,37 +39,6 @@ const draw = {
   },
 };
 
-const menuIcon = {
-  initial: {
-    backgroundColor: "#fff",
-    padding: "0rem",
-  },
-
-  sticky: {
-    backgroundColor: "#fff",
-    boxShadow: "0 4px 30px 0px rgba(0,0,0,0.1)",
-    padding: "1rem",
-  },
-};
-
-const logoImg = {
-  initial: {
-    opacity: 1,
-  },
-  mobileVisible: {
-    opacity: 1,
-    transition: {
-      opacity: { duration: 0.1 },
-    },
-  },
-  desktopVisible: {
-    opacity: 1,
-    transition: {
-      opacity: { duration: 0.5, delay: 0.5 },
-    },
-  },
-};
-
 const MenuDialog = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
@@ -77,8 +46,6 @@ const MenuDialog = () => {
     <Dialog.Root open={isMenuOpen} onOpenChange={setIsMenuOpen}>
       <Dialog.Trigger>
         <motion.div
-          variants={menuIcon}
-          animate="initial"
           whileHover="hover"
           id="menuIcon"
           className="group flex aspect-square cursor-pointer flex-col items-center justify-center rounded-full"

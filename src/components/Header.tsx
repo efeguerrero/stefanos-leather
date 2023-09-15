@@ -12,7 +12,7 @@ const images = [
 const Header = () => {
   return (
     <>
-      <header className="container relative h-[100svh] max-w-7xl overflow-hidden bg-white pt-28 lg:pt-[6rem]">
+      <header className="container relative h-[100svh] max-w-7xl overflow-hidden  bg-white pt-28 lg:pt-[6rem]">
         <section className="flex h-full w-full flex-col items-center justify-center gap-2 sm:justify-end sm:gap-14">
           <div className="flex w-full items-center justify-start @container sm:hidden">
             <h2 className="w-full text-left font-extrabold uppercase leading-[1.1] tracking-normal text-black @[1rem]:[font-size:clamp(1rem_,16cqw_,3.4rem)] ">

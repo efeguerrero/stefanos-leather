@@ -15,6 +15,7 @@ import FilterDialog from "@/components/productsLayout/filter/FilterDialog";
 import FilterTigger from "@/components/productsLayout/filter/FilterTrigger";
 import Logo from "@/components/nav/Logo";
 import MenuDialog from "@/components/nav/MenuDialog";
+import Footer from "@/components/Footer";
 
 const filterOptions = [
   { name: "All Products", href: "/products" },
@@ -54,7 +55,7 @@ const ProductsLayout = ({ children }: LayoutProps) => {
   }, []);
 
   return (
-    <div className="bg-white">
+    <section className="flex min-h-[100dvh] flex-col">
       {/* Mobile filter dialog */}
       <FilterDialog
         mobileFiltersOpen={mobileFiltersOpen}
@@ -65,7 +66,7 @@ const ProductsLayout = ({ children }: LayoutProps) => {
       />
       {/* End of mobile filter dialog */}
 
-      <main className="mx-auto  max-w-7xl">
+      <main className="mx-auto max-w-7xl">
         <div className="container">
           <div className="sticky inset-x-0 top-0 z-[11] flex items-center justify-between bg-white/50 pb-6 pt-8 backdrop-blur-lg ">
             {/* Filter Button for mobile View */}
@@ -97,7 +98,8 @@ const ProductsLayout = ({ children }: LayoutProps) => {
           {/* Product grid */}
         </div>
       </main>
-    </div>
+      <Footer />
+    </section>
   );
 };
 
