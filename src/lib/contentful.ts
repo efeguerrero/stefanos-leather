@@ -1,5 +1,7 @@
 import { createClient, EntryFieldTypes, Asset } from "contentful";
 
+//Types
+
 export interface Categories {
   contentTypeId: "categories";
   fields: {
@@ -33,6 +35,8 @@ export interface Products {
     sizes: EntryFieldTypes.Text[];
   };
 }
+
+//Client Creation
 
 export const contentfulClient = createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID!,
