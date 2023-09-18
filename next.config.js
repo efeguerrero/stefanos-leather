@@ -9,6 +9,9 @@ module.exports = {
       {
         hostname: "images.pexels.com",
       },
+      {
+        hostname: "images.ctfassets.net",
+      },
     ],
   },
 };
