@@ -161,8 +161,8 @@ const MenuDialog = () => {
                             transition={{
                               opacity: {
                                 type: "tween",
-                                duration: 1,
-                                delay: 0.3 + index / 5,
+                                duration: 0.8,
+                                delay: 0.1 + index / 6,
                               },
                               y: {
                                 type: "tween",
