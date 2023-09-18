@@ -4,15 +4,14 @@ import React from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
-//Type Definition
-interface BreadCrumbsProps {
-  categories: any;
-  subCategories: any;
-}
+//ContentFul Imports
+import { useCategories, useSubCategories } from "@/lib/contentful";
 
-const BreadCrumbs = ({ categories, subCategories }: BreadCrumbsProps) => {
+const BreadCrumbs = () => {
+  const { categories, categoriesLoading } = useCategories();
+  const { subCategories, subCategoriesLoading } = useSubCategories();
+
   const router = useRouter();
-
   const categorySlug = router.query.category;
   const subCategorySlug = router.query.subCategory;
 
@@ -20,13 +19,14 @@ const BreadCrumbs = ({ categories, subCategories }: BreadCrumbsProps) => {
     (cat: any) => cat.fields.slug === categorySlug,
   );
 
-  const categoryName = category?.fields.name;
+  const categoryName = (category?.fields.name as String) || "";
 
   const subCategory = subCategories?.find(
     (subCat: any) => subCat.fields.slug === subCategorySlug,
   );
-  const subCategoryName = subCategory?.fields.name;
+  const subCategoryName = (subCategory?.fields.name as String) || "";
 
+  if (categoriesLoading || subCategoriesLoading) return <></>;
   return (
     <div className="flex">
       <Link className="text-gray-600" href={`/products/${categorySlug}`}>

@@ -11,17 +11,11 @@ import Filters from "./Filters";
 interface FilterDialogProps {
   mobileFiltersOpen: boolean;
   setMobileFiltersOpen: React.Dispatch<React.SetStateAction<boolean>>;
-  filterOptions: any;
-  categories: any;
-  subCategories: any;
 }
 
 const FilterDialog = ({
   mobileFiltersOpen,
   setMobileFiltersOpen,
-  filterOptions,
-  categories,
-  subCategories,
 }: FilterDialogProps) => {
   return (
     <Transition.Root show={mobileFiltersOpen} as={Fragment}>
@@ -67,12 +61,7 @@ const FilterDialog = ({
 
               {/* Mobile Filters */}
               <div className="mt-4 block py-6 lg:hidden">
-                <Filters
-                  filterOptions={filterOptions}
-                  categories={categories}
-                  subCategories={subCategories}
-                  setMobileFiltersOpen={setMobileFiltersOpen}
-                />
+                <Filters setMobileFiltersOpen={setMobileFiltersOpen} />
               </div>
             </Dialog.Panel>
           </Transition.Child>

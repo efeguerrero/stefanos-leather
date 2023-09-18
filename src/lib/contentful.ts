@@ -1,4 +1,5 @@
 import { createClient, EntryFieldTypes, Asset } from "contentful";
+import useSWR from "swr";
 
 //Types
 
@@ -42,3 +43,33 @@ export const contentfulClient = createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID!,
   accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_DELIVERY_TOKEN!,
 });
+
+//SWR Fetching
+
+export const fetcher = (contentType: string) =>
+  contentfulClient
+    .getEntries({ content_type: contentType })
+    .then((res) => res.items);
+
+export function useCategories() {
+  const { data, error, isLoading } = useSWR("categories", fetcher);
+  return {
+    categories: data,
+    categoriesError: error,
+    categoriesLoading: isLoading,
+  };
+}
+
+export function useSubCategories() {
+  const { data, error, isLoading } = useSWR("subCategories", fetcher);
+  return {
+    subCategories: data,
+    subCategoriesError: error,
+    subCategoriesLoading: isLoading,
+  };
+}
+
+export function useProducts() {
+  const { data, error, isLoading } = useSWR("products", fetcher);
+  return { products: data, productsError: error, productsLoading: isLoading };
+}
