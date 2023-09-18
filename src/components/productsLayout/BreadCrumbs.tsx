@@ -26,7 +26,7 @@ const BreadCrumbs = () => {
   );
   const subCategoryName = (subCategory?.fields.name as String) || "";
 
-  if (categoriesLoading || subCategoriesLoading) return <></>;
+  if (categoriesLoading || subCategoriesLoading) return <div></div>;
   return (
     <div className="flex lg:gap-4">
       <Link

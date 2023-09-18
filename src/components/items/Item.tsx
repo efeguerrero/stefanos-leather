@@ -22,16 +22,18 @@ const Item = ({ product }: ItemProps) => {
           <Variants product={product} />
         </div>
         <Link
-          className="linear mb-auto hidden w-max cursor-pointer rounded-lg bg-gray-600 px-4 py-2 text-white transition-all duration-200 hover:bg-gray-900 lg:block"
+          className="linear mb-auto hidden w-max cursor-pointer rounded-lg bg-alpha px-4 py-2 text-white transition-all duration-200 hover:bg-gray-900 lg:block"
           href="/#contact"
+          scroll={false}
         >
           Contact Us
         </Link>
       </div>
       <Gallery images={product.fields.images} />
       <Link
-        className=" mb-auto w-full cursor-pointer rounded-lg bg-gray-600 px-4 py-3 text-center text-white  lg:hidden "
+        className=" mb-auto w-full cursor-pointer rounded-lg bg-alpha px-4 py-3 text-center text-white  lg:hidden "
         href="/#contact"
+        scroll={false}
       >
         Contact Us
       </Link>
