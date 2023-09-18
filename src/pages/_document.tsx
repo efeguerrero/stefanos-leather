@@ -8,7 +8,7 @@ export default function Document() {
       <Head>
         <title>Stefanos Leather</title>
       </Head>
-      <body className={`${inter.variable}  scroll scroll-smooth font-inter`}>
+      <body className={`${inter.variable} font-inter`}>
         <Main />
         <NextScript />
       </body>

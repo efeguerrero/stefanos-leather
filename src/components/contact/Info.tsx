@@ -1,5 +1,8 @@
 import React from "react";
 
+//Next Imports
+import Link from "next/link";
+
 const Info = () => {
   return (
     <div>
@@ -20,7 +23,7 @@ const Info = () => {
             ></path>
           </svg>
           <span className="mx-2  truncate text-gray-600">
-            +54 9 11 3896 2036
+            +54 9 11 3195 9697
           </span>
         </p>
 
@@ -65,14 +68,16 @@ const Info = () => {
             ></path>
           </svg>
 
-          <span className="mx-2  text-gray-600">Buenos Aires, Argentina.</span>
+          <span className="mx-2  text-gray-600">
+            Suipacha 837, Buenos Aires, Argentina.
+          </span>
         </p>
       </div>
       <div className="mt-6 lg:mt-8">
         <div className="-mx-1.5 mt-4 flex">
-          <a
+          <Link
             className="mx-1.5 transform text-gray-600 transition-colors duration-300 lg:hover:text-gray-900"
-            href="https://www.facebook.com/crecemas"
+            href="https://www.facebook.com/people/Stefanos-Deco/100064318380862/"
             target="_blank"
           >
             <svg
@@ -86,10 +91,10 @@ const Info = () => {
                 fill="currentColor"
               ></path>
             </svg>
-          </a>
-          <a
+          </Link>
+          <Link
             className="mx-1.5 transform text-gray-600 transition-colors duration-300 lg:hover:text-gray-900"
-            href="https://www.instagram.com/crecemas/"
+            href="https://www.instagram.com/stefanosdeco/"
             target="_blank"
           >
             <svg
@@ -103,7 +108,7 @@ const Info = () => {
                 fill="currentColor"
               ></path>
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
     </div>

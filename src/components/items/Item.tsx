@@ -1,5 +1,8 @@
 import React from "react";
 
+//Next Imports
+import Link from "next/link";
+
 //Component Imports
 import Gallery from "@/components/items/Gallery";
 import Info from "@/components/items/Info";
@@ -18,9 +21,21 @@ const Item = ({ product }: ItemProps) => {
         <div className="hidden lg:block">
           <Variants product={product} />
         </div>
+        <Link
+          className="linear mb-auto hidden w-max cursor-pointer rounded-lg bg-gray-600 px-4 py-2 text-white transition-all duration-200 hover:bg-gray-900 lg:block"
+          href="/#contact"
+        >
+          Contact Us
+        </Link>
       </div>
       <Gallery images={product.fields.images} />
-      <div className="lg:hidden">
+      <Link
+        className=" mb-auto w-full cursor-pointer rounded-lg bg-gray-600 px-4 py-3 text-center text-white  lg:hidden "
+        href="/#contact"
+      >
+        Contact Us
+      </Link>
+      <div className="border-t-[1px] border-gray-200 pt-6 lg:hidden">
         <Variants product={product} />
       </div>
     </div>

@@ -28,16 +28,20 @@ const BreadCrumbs = () => {
 
   if (categoriesLoading || subCategoriesLoading) return <></>;
   return (
-    <div className="flex">
-      <Link className="text-gray-600" href={`/products/${categorySlug}`}>
-        {categorySlug ? `${categoryName} \u00A0 ` : "All Products"}
+    <div className="flex lg:gap-4">
+      <Link
+        className="text-sm text-gray-400"
+        href={`/products/${categorySlug}`}
+      >
+        {categorySlug ? `${categoryName}` : "All Products"}
       </Link>
       {subCategorySlug ? (
         <Link
-          className="text-gray-600"
+          className="text-sm text-gray-400"
           href={`/products/${categorySlug}/${subCategorySlug}`}
         >
-          / {subCategoryName}
+          <span className="text-gray-300">{`\u00A0 / \u00A0`}</span>
+          {subCategoryName}
         </Link>
       ) : null}
     </div>
