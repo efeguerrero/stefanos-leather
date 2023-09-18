@@ -8,6 +8,9 @@ import {
 import mapImg from "@/assets/imgs/worldmap.svg";
 import mapMobile from "@/assets/imgs/mobileMap.svg";
 
+//Next Js Imports
+import Image from "next/image";
+
 const features = [
   {
     name: "Push to deploy.",
@@ -29,7 +32,7 @@ const features = [
   },
 ];
 
-export default function Example() {
+export default function Shipping() {
   return (
     <div
       id="shipping"
@@ -66,15 +69,13 @@ export default function Example() {
           </div>
         </div>
         <div className="relative border-[1px] border-r border-white after:absolute after:left-0 after:top-0 after:h-full after:w-full after:rounded-xl after:shadow-[inset_-70px_0px_90px_-5px_#ffffff] md:after:shadow-none lg:after:shadow-[inset_-90px_0px_50px_-30px_#ffffff]  ">
-          <img
-            src={mapImg.src}
+          <Image
+            src={mapImg}
             alt="Product screenshot"
             className="hidden h-full object-cover md:block lg:aspect-auto lg:object-left"
-            width={2432}
-            height={1442}
           />
-          <img
-            src={mapMobile.src}
+          <Image
+            src={mapMobile}
             alt="Product screenshot"
             className="h-full object-cover md:hidden md:aspect-auto lg:object-left"
           />
