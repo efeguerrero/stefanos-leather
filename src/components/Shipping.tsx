@@ -32,7 +32,7 @@ const features = [
 export default function Example() {
   return (
     <div className="mx-auto max-w-7xl overflow-hidden py-24 sm:py-32">
-      <div className="container grid grid-cols-1 gap-x-4 gap-y-16 sm:gap-y-20  lg:grid-cols-[2.5fr_4fr]">
+      <div className="container grid grid-cols-1 gap-x-4 gap-y-16 sm:gap-y-20 lg:grid-cols-[2.5fr_4fr]">
         <div className="lg:pt-4">
           <div className="lg:max-w-md">
             <h2 className="text-base font-semibold leading-7 text-alpha">

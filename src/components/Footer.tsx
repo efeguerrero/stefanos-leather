@@ -23,7 +23,7 @@ const Footer = () => {
         >
           <img src={logo.src} className="h-8 w-auto" alt="Brand Logo" />
         </Link>
-        <p className=" mt-4 text-sm sm:ml-4 sm:mt-0 sm:border-l-2 sm:border-gray-600 sm:py-2 sm:pl-4">
+        <p className=" mt-4 text-center text-sm sm:ml-4 sm:mt-0 sm:border-l-2 sm:border-gray-600 sm:py-2 sm:pl-4">
           All Rights Reserved. ©<span id="yearHolder">{currentYear}</span>{" "}
           Stefanos Leather
         </p>

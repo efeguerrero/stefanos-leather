@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import CategoriesGrid from "@/components/categories/CategoriesGrid";
 import Layout from "@/components/Layout";
 import Shipping from "@/components/Shipping";
+import Contact from "@/components/contact/Contact";
 
 //Types Imports
 import type { NextPageWithLayout } from "./_app";
@@ -38,6 +39,7 @@ const Home = ({ categories }: HomeProps) => {
       <Header />
       <CategoriesGrid categories={categories} />
       <Shipping />
+      <Contact />
     </>
   );
 };
