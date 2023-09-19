@@ -42,10 +42,20 @@ const Info = () => {
               d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
             ></path>
           </svg>
-
-          <span className="mx-2  truncate text-gray-600">
+          <a
+            href="mailto:i???foATstef?nosle?therDOTcom"
+            className="mx-2 text-gray-600"
+            onClick={(e) =>
+              (e.currentTarget.href = e.currentTarget.href
+                .replace("???", "n")
+                .replace("AT", "@")
+                .replace("?", "a")
+                .replace("?", "a")
+                .replace("DOT", "."))
+            }
+          >
             info@stefanosleather.com
-          </span>
+          </a>
         </p>
         <p className="-mx-2 flex items-start">
           <svg
