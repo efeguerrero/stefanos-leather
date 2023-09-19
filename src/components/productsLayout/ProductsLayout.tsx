@@ -47,7 +47,7 @@ const ProductsLayout = ({ children }: LayoutProps) => {
                   <Filters />
                 </div>
                 {/* Product grid */}
-                <div className="lg:col-span-3 lg:px-8">{children}</div>
+                <div className="lg:col-span-3 lg:pl-8">{children}</div>
               </div>
             </section>
           </div>

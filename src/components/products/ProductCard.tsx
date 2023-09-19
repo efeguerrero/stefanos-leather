@@ -2,6 +2,7 @@ import React from "react";
 
 //Next Imports
 import Link from "next/link";
+import Image from "next/image";
 
 interface ProductCardProps {
   product: any;
@@ -18,11 +19,12 @@ const ProductCard = ({ product }: ProductCardProps) => {
       href={`/products/${categorySlug}/${subCategorySlug}/item/${id}/${slug}`}
       className="group"
     >
-      <div className=" aspect-[4/5] w-full overflow-hidden rounded-lg bg-gray-200">
-        <img
-          src={coverImage.fields.file.url}
+      <div className="relative aspect-[4/3]  w-full overflow-hidden rounded-lg bg-gray-200">
+        <Image
+          src={`https:${coverImage.fields.file.url}`}
+          fill
           alt="Product Image"
-          className="h-full w-full object-cover object-center group-hover:opacity-75"
+          className="h-full w-full object-cover object-center transition-all duration-300 group-hover:scale-105"
         />
       </div>
       <h3 className="mt-4 text-sm text-gray-700">{name}</h3>

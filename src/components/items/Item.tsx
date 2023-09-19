@@ -22,7 +22,7 @@ const Item = ({ product }: ItemProps) => {
           <Variants product={product} />
         </div>
         <Link
-          className="linear mb-auto hidden w-max cursor-pointer rounded-lg bg-alpha px-4 py-2 text-white transition-all duration-200 hover:bg-gray-900 lg:block"
+          className="mb-auto hidden w-max cursor-pointer rounded-lg bg-alpha px-4 py-2 text-white transition-all duration-200 hover:bg-gray-900 lg:block"
           href="/#contact"
           scroll={false}
         >
