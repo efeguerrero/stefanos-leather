@@ -64,7 +64,7 @@ const FilterAccordion = ({
             onClick={() => setOpen(!open)}
             className="flex w-full items-center justify-between bg-white text-sm text-gray-500"
           >
-            <h3 className="text-base font-semibold text-black ">
+            <h3 className="text-base font-semibold text-gray-950 ">
               {category.fields.name}
             </h3>
             <div className="relative ml-6 flex h-5 w-5 items-center">

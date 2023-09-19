@@ -45,8 +45,8 @@ const Filters = ({ setMobileFiltersOpen }: FiltersProps) => {
                 onClick={(e) => handleMenuLinkClick(e.currentTarget)}
                 href={filterOption.href}
                 className={`${
-                  active ? "text-bravo" : "text-gray-600"
-                } text-base transition-colors duration-200`}
+                  active ? "text-bravo" : "text-gray-950"
+                } text-base font-semibold transition-colors duration-200`}
               >
                 {filterOption.name}
               </Link>
