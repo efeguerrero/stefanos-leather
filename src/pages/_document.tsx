@@ -1,6 +1,6 @@
 import { Html, Head, Main, NextScript } from "next/document";
 
-import { inter } from "./_app";
+import { inter, jakarta } from "./_app";
 
 export default function Document() {
   return (
@@ -8,7 +8,7 @@ export default function Document() {
       <Head>
         <title>Stefanos Leather</title>
       </Head>
-      <body className={`${inter.variable} font-inter`}>
+      <body className={`${inter.variable} ${jakarta.variable} font-jakarta`}>
         <Main />
         <NextScript />
       </body>

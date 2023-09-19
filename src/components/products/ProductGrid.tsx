@@ -11,9 +11,15 @@ export default function ProductGrid({ products }: ProductGridProps) {
     <div className="bg-white">
       <h2 className="sr-only">Products</h2>
       <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
-        {products.map((product: any) => (
-          <ProductCard key={product.sys.id} product={product} />
-        ))}
+        {!products.length ? (
+          <h3 className="text-sm font-medium italic text-gray-600">
+            No products found for this selection.
+          </h3>
+        ) : (
+          products.map((product: any) => (
+            <ProductCard key={product.sys.id} product={product} />
+          ))
+        )}
       </div>
     </div>
   );

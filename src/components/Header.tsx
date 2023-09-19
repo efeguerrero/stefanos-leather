@@ -15,7 +15,7 @@ const Header = () => {
       <header className="container relative h-[calc(100svh-4.5rem)] max-w-7xl overflow-hidden bg-white pt-8">
         <section className="flex h-full w-full flex-col items-center justify-center gap-2 sm:justify-end sm:gap-14">
           <div className="flex w-full items-center justify-start @container sm:hidden">
-            <h2 className="w-full text-left font-extrabold uppercase leading-[1.1] tracking-normal text-black @[1rem]:[font-size:clamp(1rem_,16cqw_,3.4rem)] ">
+            <h2 className="w-full text-left font-bold uppercase leading-[1.1] tracking-normal text-gray-950 @[1rem]:[font-size:clamp(1rem_,16cqw_,3.4rem)] ">
               Argentine leather <br /> to the world
             </h2>
           </div>
@@ -34,7 +34,7 @@ const Header = () => {
               />
             </div>
             <div className="flex h-full flex-col justify-start gap-6 pb-3 @container">
-              <h2 className="text-left font-extrabold uppercase leading-[1] tracking-normal text-black @[1rem]:text-[17cqw]">
+              <h2 className="text-left font-bold uppercase leading-[1] tracking-normal text-gray-950 @[1rem]:text-[17cqw]">
                 Argentine leather to the world
               </h2>
               <Image
@@ -63,8 +63,8 @@ const Header = () => {
                 alt="Living Room Photo"
                 className="h-full min-h-0 rounded-lg object-cover"
               />
-              <h2 className="font-regular f col-start-2 pb-12 text-left text-sm tracking-tighter text-black">
-                <span className="text-xl font-extrabold uppercase tracking-tight">
+              <h2 className="font-regular f col-start-2 pb-12 text-left text-base tracking-tighter text-gray-800">
+                <span className="text-xl font-extrabold uppercase tracking-normal">
                   We are Stefanos Leather.
                 </span>
                 <br />
@@ -122,7 +122,7 @@ const Header = () => {
       </header>
 
       <section className="container flex items-center justify-center py-24 sm:hidden lg:py-32">
-        <h2 className="font-regular w-full text-left text-base tracking-tighter text-black">
+        <h2 className="font-regular w-full text-left text-base tracking-tighter text-gray-950">
           <span className="mb-2 text-4xl font-extrabold uppercase tracking-tight">
             We are Stefanos Leather.
           </span>

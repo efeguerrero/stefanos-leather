@@ -13,7 +13,7 @@ const Info = ({ product }: InfoProps) => {
       <h1 className="text-4xl font-bold tracking-tight">{name}</h1>
       <div>
         <h3 className="sr-only">Description</h3>
-        <p className="text-lg text-gray-600 lg:text-base">{description}</p>
+        <p className="text-lg text-gray-800 lg:text-base">{description}</p>
       </div>
     </div>
   );

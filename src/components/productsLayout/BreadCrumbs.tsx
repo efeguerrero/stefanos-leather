@@ -30,17 +30,17 @@ const BreadCrumbs = () => {
   return (
     <div className="flex lg:gap-4">
       <Link
-        className="text-sm text-gray-400"
+        className="text-sm text-gray-600"
         href={`/products/${categorySlug}`}
       >
         {categorySlug ? `${categoryName}` : "All Products"}
       </Link>
       {subCategorySlug ? (
         <Link
-          className="text-sm text-gray-400"
+          className="text-sm text-gray-600"
           href={`/products/${categorySlug}/${subCategorySlug}`}
         >
-          <span className="text-gray-300">{`\u00A0 / \u00A0`}</span>
+          <span className="text-gray-400">{`\u00A0 / \u00A0`}</span>
           {subCategoryName}
         </Link>
       ) : null}

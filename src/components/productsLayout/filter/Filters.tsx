@@ -10,11 +10,7 @@ import FilterAccordion from "./FilterAccordion";
 //ContentFul Imports
 import { useCategories } from "@/lib/contentful";
 
-const filterOptions = [
-  { name: "All Products", href: "/products" },
-  { name: "Most Popular", href: "/products/backpacks" },
-  { name: "New In!", href: "/products/new" },
-];
+const filterOptions = [{ name: "All Products", href: "/products" }];
 
 interface FiltersProps {
   setMobileFiltersOpen?: React.Dispatch<React.SetStateAction<boolean>>;
@@ -50,7 +46,7 @@ const Filters = ({ setMobileFiltersOpen }: FiltersProps) => {
                 href={filterOption.href}
                 className={`${
                   active ? "text-bravo" : "text-gray-600"
-                } text-sm transition-colors duration-200`}
+                } text-base transition-colors duration-200`}
               >
                 {filterOption.name}
               </Link>

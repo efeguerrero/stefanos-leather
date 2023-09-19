@@ -16,13 +16,13 @@ interface ItemProps {
 const Item = ({ product }: ItemProps) => {
   return (
     <div className="grid gap-8 lg:grid-cols-2 lg:gap-2 lg:px-12">
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-8 lg:pr-2">
         <Info product={product} />
         <div className="hidden lg:block">
           <Variants product={product} />
         </div>
         <Link
-          className="mb-auto hidden w-max cursor-pointer rounded-lg bg-alpha px-4 py-2 text-white transition-all duration-200 hover:bg-gray-900 lg:block"
+          className="mb-auto hidden w-max cursor-pointer rounded-lg bg-gray-600 px-3.5 py-2.5 text-sm font-semibold text-white transition-all duration-200 hover:bg-gray-900  lg:block"
           href="/#contact"
           scroll={false}
         >
@@ -31,7 +31,7 @@ const Item = ({ product }: ItemProps) => {
       </div>
       <Gallery images={product.fields.images} />
       <Link
-        className=" mb-auto w-full cursor-pointer rounded-lg bg-alpha px-4 py-3 text-center text-white  lg:hidden "
+        className=" mb-auto w-full cursor-pointer rounded-lg bg-gray-600 px-3.5 py-2.5 text-center text-white  lg:hidden "
         href="/#contact"
         scroll={false}
       >

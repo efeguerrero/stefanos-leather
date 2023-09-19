@@ -3,7 +3,7 @@ import type { NextPage } from "next";
 
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
-import { Inter } from "next/font/google";
+import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -12,6 +12,12 @@ export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
 export const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+});
+
+export const jakarta = Plus_Jakarta_Sans({
+  // weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-jakarta",
+  subsets: ["latin"],
 });
 
 type AppPropsWithLayout = AppProps & {

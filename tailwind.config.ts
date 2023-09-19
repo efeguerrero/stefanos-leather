@@ -12,9 +12,9 @@ const config: Config = {
         transparent: "transparent",
         current: "currentColor",
         white: "#ffffff",
-        black: "#080708",
+        black: "#030712",
         alpha: "#574238",
-        bravo: "#EF946C",
+        bravo: "#FF4F0A",
       },
       transitionTimingFunction: {
         spring: "cubic-bezier(0.35,0.78,0.57,1.41)",
@@ -31,6 +31,7 @@ const config: Config = {
       },
       fontFamily: {
         inter: ["var(--font-inter)"],
+        jakarta: ["var(--font-jakarta)"],
       },
     },
   },

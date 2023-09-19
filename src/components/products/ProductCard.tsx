@@ -14,12 +14,14 @@ const ProductCard = ({ product }: ProductCardProps) => {
   const subCategorySlug = subCategory.fields.slug;
   const { id } = product.sys;
 
+  console.log(product.fields.images);
+
   return (
     <Link
       href={`/products/${categorySlug}/${subCategorySlug}/item/${id}/${slug}`}
       className="group"
     >
-      <div className="relative aspect-[4/3]  w-full overflow-hidden rounded-lg bg-gray-200">
+      <div className="relative aspect-square  w-full overflow-hidden rounded-lg bg-gray-200">
         <Image
           src={`https:${coverImage.fields.file.url}`}
           fill
@@ -27,7 +29,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
           className="h-full w-full object-cover object-center transition-all duration-300 group-hover:scale-105"
         />
       </div>
-      <h3 className="mt-4 text-sm text-gray-700">{name}</h3>
+      <h3 className="mt-4 text-base font-medium text-gray-600">{name}</h3>
     </Link>
   );
 };

@@ -3,19 +3,19 @@
 @tailwind utilities;
 
 body {
-  scrollbar-width: 6px;
+  scrollbar-width: 10px;
   scrollbar-base-color: transparent;
   -webkit-tap-highlight-color: transparent;
 }
 
 body::-webkit-scrollbar {
   /* display: none; Remove scrollbar for Chrome, Safari, and Opera */
-  width: 6px;
-  background: #fff;
+  width: 10px;
+  background: #d1d5db;
 }
 
 body::-webkit-scrollbar-thumb {
-  background: #080708;
+  background: #4b5563;
 }
 
 button:focus {

@@ -1,5 +1,8 @@
 import React from "react";
 
+//Framer Motion Imports
+import { motion } from "framer-motion";
+
 //Type Definition
 interface GalleryProps {
   images: any[];

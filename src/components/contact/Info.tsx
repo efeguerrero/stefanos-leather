@@ -7,7 +7,7 @@ const Info = () => {
   return (
     <div>
       <div className="space-y-4 ">
-        <p className="-mx-2 flex items-start">
+        {/* <p className="-mx-2 flex items-start">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="mx-2 h-6 w-6 text-gray-600"
@@ -25,7 +25,7 @@ const Info = () => {
           <span className="mx-2  truncate text-gray-600">
             +54 9 11 3195 9697
           </span>
-        </p>
+        </p> */}
 
         <p className="-mx-2 flex items-start">
           <svg

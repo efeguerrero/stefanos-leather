@@ -41,10 +41,10 @@ export default function Shipping() {
       <div className="container grid grid-cols-1 gap-x-4 gap-y-16 sm:gap-y-20 lg:grid-cols-[2.5fr_4fr]">
         <div className="lg:pt-4">
           <div className="lg:max-w-md">
-            <h2 className="text-base font-semibold leading-7 text-alpha">
+            <h2 className="text-base font-semibold leading-7 text-gray-700">
               Our products to your location.
             </h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <p className=" mt-2 text-2xl  font-bold text-gray-950 sm:text-4xl">
               Worldwide Shipping
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -55,9 +55,9 @@ export default function Shipping() {
             <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
               {features.map((feature) => (
                 <div key={feature.name} className="relative pl-9">
-                  <dt className="inline font-semibold text-gray-900">
+                  <dt className="inline font-semibold text-gray-950">
                     <feature.icon
-                      className="absolute left-1 top-1 h-5 w-5 text-alpha"
+                      className="absolute left-1 top-1 h-5 w-5 text-gray-700"
                       aria-hidden="true"
                     />
                     {feature.name}

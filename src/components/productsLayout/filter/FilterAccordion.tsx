@@ -64,7 +64,9 @@ const FilterAccordion = ({
             onClick={() => setOpen(!open)}
             className="flex w-full items-center justify-between bg-white text-sm text-gray-500"
           >
-            <h3 className="font-medium text-black ">{category.fields.name}</h3>
+            <h3 className="text-base font-semibold text-black ">
+              {category.fields.name}
+            </h3>
             <div className="relative ml-6 flex h-5 w-5 items-center">
               {open ? (
                 <MinusIcon className="absolute h-full w-full" />
@@ -91,7 +93,7 @@ const FilterAccordion = ({
                       href={`/products/${category.fields.slug}`}
                       className={`${
                         active ? "text-bravo" : "text-gray-600"
-                      } text-sm transition-colors duration-200`}
+                      } text-[0.92rem] transition-colors duration-200`}
                     >
                       {`All ${category.fields.name} `}
                     </Link>
@@ -112,7 +114,7 @@ const FilterAccordion = ({
                             href={`/products/${category.fields.slug}/${subCategory.fields.slug}`}
                             className={`${
                               active ? "text-bravo" : "text-gray-600"
-                            } text-sm transition-colors duration-200`}
+                            } text-[0.92rem] transition-colors duration-200`}
                           >
                             {subCategory.fields.name}
                           </Link>
