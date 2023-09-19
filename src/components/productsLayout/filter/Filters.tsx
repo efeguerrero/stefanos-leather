@@ -46,7 +46,7 @@ const Filters = ({ setMobileFiltersOpen }: FiltersProps) => {
                 href={filterOption.href}
                 className={`${
                   active ? "text-bravo" : "text-gray-950"
-                } text-base font-semibold transition-colors duration-200`}
+                } text-base font-normal transition-colors duration-200`}
               >
                 {filterOption.name}
               </Link>

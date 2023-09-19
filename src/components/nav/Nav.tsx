@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 //Component Imports
 import Logo from "@/components/nav/Logo";
@@ -33,9 +33,9 @@ export default function Nav() {
         <Logo />
         <motion.nav className="flex w-max items-center justify-center  ">
           {/* //Mobile Menu */}
-          <div className="flex gap-24">
+          <motion.div className="flex gap-24">
             <MenuDialog />
-          </div>
+          </motion.div>
         </motion.nav>
       </div>
     </motion.section>
