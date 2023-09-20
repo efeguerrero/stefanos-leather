@@ -41,9 +41,6 @@ const draw = {
 
 const MenuDialog = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  const [isAnimationEnd, setIsAnimationEnd] = React.useState(false);
-
-  console.log(isAnimationEnd);
 
   return (
     <Dialog.Root open={isMenuOpen} onOpenChange={setIsMenuOpen}>

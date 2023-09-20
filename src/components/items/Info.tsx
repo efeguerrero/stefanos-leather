@@ -2,7 +2,13 @@ import React from "react";
 
 //Type Definition
 interface InfoProps {
-  product: any;
+  product: {
+    sys: any;
+    fields: {
+      name: string;
+      description: string;
+    };
+  };
 }
 
 const Info = ({ product }: InfoProps) => {
@@ -10,7 +16,7 @@ const Info = ({ product }: InfoProps) => {
 
   return (
     <div className="mx-auto w-full space-y-2">
-      <h1 className="text-4xl font-bold tracking-tight">{name}</h1>
+      <h3 className="text-4xl font-bold tracking-tight">{name}</h3>
       <div>
         <h3 className="sr-only">Description</h3>
         <p className="text-lg text-gray-800 lg:text-base">{description}</p>
