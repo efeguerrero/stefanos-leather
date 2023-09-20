@@ -17,6 +17,7 @@ const Gallery = ({ images }: GalleryProps) => {
         <Image
           src={`https:${currentImg}`}
           fill
+          sizes="(max-width:1280px) 100vw, 40vw"
           alt="product"
           className="h-full w-full object-cover"
         />
@@ -26,11 +27,13 @@ const Gallery = ({ images }: GalleryProps) => {
           return (
             <div
               key={index}
+              onClick={() => setCurrentImg(image.fields.file.url)}
               className="relative aspect-square w-full overflow-hidden rounded-md"
             >
-              <img
-                onClick={() => setCurrentImg(image.fields.file.url)}
+              <Image
                 src={`https:${image.fields.file.url}`}
+                width={150}
+                height={150}
                 alt="product"
                 className="h-full w-full object-cover"
               />
