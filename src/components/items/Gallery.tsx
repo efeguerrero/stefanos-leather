@@ -20,7 +20,7 @@ const Gallery = ({ images }: GalleryProps) => {
           className="h-full w-full object-cover"
         />
       </div>
-      <div className="grid cursor-pointer grid-cols-4 gap-3">
+      <div className="grid cursor-pointer grid-cols-4 gap-3 md:grid-cols-6 lg:grid-cols-4">
         {images.map((image: any, index: number) => {
           return (
             <div

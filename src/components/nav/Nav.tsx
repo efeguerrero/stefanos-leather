@@ -29,14 +29,16 @@ export default function Nav() {
       id="navContainer"
       className="sticky inset-x-0 top-0 z-[11] bg-white py-5"
     >
-      <div className="container flex max-w-7xl items-center justify-between">
-        <Logo />
-        <motion.nav className="flex w-max items-center justify-center  ">
-          {/* //Mobile Menu */}
-          <motion.div className="flex gap-24">
-            <MenuDialog />
-          </motion.div>
-        </motion.nav>
+      <div className="mx-auto max-w-7xl ">
+        <div className="container flex items-center justify-between">
+          <Logo />
+          <motion.nav className="flex w-max items-center justify-center  ">
+            {/* //Mobile Menu */}
+            <motion.div className="flex gap-24">
+              <MenuDialog />
+            </motion.div>
+          </motion.nav>
+        </div>
       </div>
     </motion.section>
   );
