@@ -25,6 +25,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
         <Image
           src={`https:${coverImage.fields.file.url}`}
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           alt="Product Image"
           className="h-full w-full object-cover object-center transition-all duration-300 lg:group-hover:scale-[1.03]"
         />
