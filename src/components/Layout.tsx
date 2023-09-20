@@ -29,9 +29,14 @@ const Layout = ({ children }: LayoutProps) => {
           />
           <meta
             property="og:image"
-            content="http://localhost:3000/assets/images/brand/ogImageF.png"
+            content="https://leather-preview.vercel.app/assets/images/brand/ogImageF.png"
           />
           <meta property="og:image:type" content="png" />
+          <meta
+            name="twitter:image"
+            content="https://leather-preview.vercel.app/assets/images/brand/ogImageT.png"
+          />
+          <meta name="twitter:image:type" content="png" />
         </Head>
         <Nav />
         <main>{children}</main>
