@@ -1,4 +1,6 @@
 import type { ReactElement, ReactNode } from "react";
+
+//Next Imports
 import type { NextPage } from "next";
 
 import "@/styles/globals.css";

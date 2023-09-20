@@ -5,9 +5,7 @@ import { inter, jakarta } from "./_app";
 export default function Document() {
   return (
     <Html lang="en">
-      <Head>
-        <title>Stefanos Leather</title>
-      </Head>
+      <Head />
       <body className={`${inter.variable} ${jakarta.variable} font-jakarta`}>
         <Main />
         <NextScript />
