@@ -11,6 +11,7 @@ const Form = () => {
           </label>
           <div className="mt-2.5">
             <input
+              required
               type="text"
               name="first-name"
               id="first-name"
@@ -28,6 +29,7 @@ const Form = () => {
           </label>
           <div className="mt-2.5">
             <input
+              required
               type="text"
               name="last-name"
               id="last-name"
@@ -46,6 +48,7 @@ const Form = () => {
           </label>
           <div className="mt-2.5">
             <input
+              required
               type="email"
               name="email"
               id="email"
@@ -63,6 +66,7 @@ const Form = () => {
           </label>
           <div className="mt-2.5">
             <textarea
+              required
               name="message"
               id="message"
               rows={4}

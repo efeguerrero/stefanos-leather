@@ -176,7 +176,7 @@ const MenuDialog = () => {
                                   letterSpacing: "0.4rem",
                                 },
                               }}
-                              className="z-10 text-center text-4xl font-extralight uppercase tracking-widest lg:text-6xl"
+                              className="z-10 text-center text-4xl font-extralight uppercase tracking-widest md:text-6xl"
                             >
                               {item.name}
                             </motion.h3>

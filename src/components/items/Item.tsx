@@ -31,7 +31,7 @@ const Item = ({ product }: ItemProps) => {
       </div>
       <Gallery images={product.fields.images} />
       <Link
-        className=" mb-auto w-full cursor-pointer rounded-lg bg-gray-600 px-3.5 py-2.5 text-center text-white md:w-[30%]  lg:hidden "
+        className=" my-2 mb-auto w-full cursor-pointer rounded-lg bg-gray-600 px-3.5 py-2.5 text-center text-white md:w-[30%]  lg:hidden "
         href="/#contact"
         scroll={false}
       >

@@ -41,15 +41,11 @@ export default function Shipping() {
   const contentRef = useRef(null);
   const isInView = useInView(contentRef, {
     once: true,
+    margin: "0px 0px -90% 0px ",
   });
 
   return (
     <motion.div
-      style={{
-        transform: isInView ? "none" : "translateY(200px)",
-        opacity: isInView ? 1 : 0,
-        transition: "all 0.7s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s",
-      }}
       ref={contentRef}
       id="shipping"
       className="mx-auto max-w-7xl overflow-hidden py-24 sm:py-32"
@@ -60,7 +56,7 @@ export default function Shipping() {
             <h2 className="text-base font-semibold leading-7 text-gray-700">
               Our products to your location.
             </h2>
-            <p className=" mt-2 text-2xl  font-bold text-gray-950 sm:text-4xl">
+            <p className=" mt-2 text-4xl  font-bold text-gray-950 ">
               Worldwide Shipping
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -84,7 +80,11 @@ export default function Shipping() {
             </dl>
           </div>
         </div>
-        <div className="relative border-[1px] border-r border-white after:absolute after:left-0 after:top-0 after:h-full after:w-full after:rounded-xl after:shadow-[inset_-70px_0px_90px_-5px_#ffffff] md:after:shadow-none lg:after:shadow-[inset_-90px_0px_50px_-30px_#ffffff]  ">
+        <div
+          className={`${
+            isInView ? "saturate-100" : "saturate-0"
+          } relative border-[1px] border-r border-white transition-all  duration-500 after:absolute after:left-0 after:top-0 after:h-full after:w-full after:rounded-xl after:shadow-[inset_-70px_0px_90px_-5px_#ffffff] md:after:shadow-none lg:after:shadow-[inset_-90px_0px_50px_-30px_#ffffff]`}
+        >
           <Image
             src={mapImg}
             alt="Product screenshot"

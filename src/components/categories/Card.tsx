@@ -40,7 +40,7 @@ const Card = ({ category }: CardProps) => {
           {name}
         </Link>
       </h3>
-      <p className="text-sm  text-gray-600">{description}</p>
+      <p className="text-[0.92rem]  text-gray-600">{description}</p>
     </div>
   );
 };

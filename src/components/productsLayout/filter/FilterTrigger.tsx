@@ -16,7 +16,7 @@ const FilterTrigger = ({ setMobileFiltersOpen }: FilterTriggerProps) => {
       onClick={() => setMobileFiltersOpen(true)}
     >
       <span className="sr-only">Filters</span>
-      <FunnelIcon className="h-5 w-5" aria-hidden="true" />
+      <FunnelIcon className="h-5 w-5 md:h-7 md:w-7" aria-hidden="true" />
     </button>
   );
 };
