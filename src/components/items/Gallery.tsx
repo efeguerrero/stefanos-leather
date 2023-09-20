@@ -1,7 +1,7 @@
 import React from "react";
 
-//Framer Motion Imports
-import { motion } from "framer-motion";
+//Next Imports
+import Image from "next/image";
 
 //Type Definition
 interface GalleryProps {
@@ -13,9 +13,10 @@ const Gallery = ({ images }: GalleryProps) => {
 
   return (
     <section className="mx-auto flex flex-col gap-6">
-      <div className="aspect-square w-full overflow-hidden rounded-md ">
-        <img
-          src={currentImg}
+      <div className="relative aspect-square w-full overflow-hidden rounded-md ">
+        <Image
+          src={`https:${currentImg}`}
+          fill
           alt="product"
           className="h-full w-full object-cover"
         />
@@ -25,11 +26,11 @@ const Gallery = ({ images }: GalleryProps) => {
           return (
             <div
               key={index}
-              className="wrap aspect-square w-full overflow-hidden rounded-md transition-all duration-200 lg:hover:-translate-y-1"
+              className="relative aspect-square w-full overflow-hidden rounded-md"
             >
               <img
                 onClick={() => setCurrentImg(image.fields.file.url)}
-                src={image.fields.file.url}
+                src={`https:${image.fields.file.url}`}
                 alt="product"
                 className="h-full w-full object-cover"
               />

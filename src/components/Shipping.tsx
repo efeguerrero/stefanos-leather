@@ -1,8 +1,13 @@
+import { useRef } from "react";
+
 import {
   CloudArrowUpIcon,
   LockClosedIcon,
   ServerIcon,
 } from "@heroicons/react/20/solid";
+
+//Framer Motion Imports
+import { motion, useInView } from "framer-motion";
 
 //Asstes imports
 import mapImg from "@/assets/imgs/worldmap.svg";
@@ -33,8 +38,19 @@ const features = [
 ];
 
 export default function Shipping() {
+  const contentRef = useRef(null);
+  const isInView = useInView(contentRef, {
+    once: true,
+  });
+
   return (
-    <div
+    <motion.div
+      style={{
+        transform: isInView ? "none" : "translateY(200px)",
+        opacity: isInView ? 1 : 0,
+        transition: "all 0.7s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s",
+      }}
+      ref={contentRef}
       id="shipping"
       className="mx-auto max-w-7xl overflow-hidden py-24 sm:py-32"
     >
@@ -61,7 +77,7 @@ export default function Shipping() {
                       aria-hidden="true"
                     />
                     {feature.name}
-                  </dt>{" "}
+                  </dt>
                   <dd className="inline">{feature.description}</dd>
                 </div>
               ))}
@@ -81,6 +97,6 @@ export default function Shipping() {
           />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

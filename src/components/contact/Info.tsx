@@ -86,7 +86,7 @@ const Info = () => {
       <div className="mt-6 lg:mt-8">
         <div className="-mx-1.5 mt-4 flex">
           <Link
-            className="mx-1.5 transform text-gray-600 transition-colors duration-300 lg:hover:text-gray-900"
+            className="mx-1.5 transform text-gray-600 transition-colors duration-300 lg:hover:text-bravo"
             href="https://www.facebook.com/people/Stefanos-Deco/100064318380862/"
             target="_blank"
           >
@@ -103,7 +103,7 @@ const Info = () => {
             </svg>
           </Link>
           <Link
-            className="mx-1.5 transform text-gray-600 transition-colors duration-300 lg:hover:text-gray-900"
+            className="mx-1.5 transform text-gray-600 transition-colors duration-300 lg:hover:text-bravo"
             href="https://www.instagram.com/stefanosdeco/"
             target="_blank"
           >

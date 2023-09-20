@@ -26,7 +26,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
           src={`https:${coverImage.fields.file.url}`}
           fill
           alt="Product Image"
-          className="h-full w-full object-cover object-center transition-all duration-300 lg:group-hover:scale-105"
+          className="h-full w-full object-cover object-center transition-all duration-300 lg:group-hover:scale-[1.03]"
         />
       </div>
       <h3 className="mt-4 text-base font-medium text-gray-600">{name}</h3>
