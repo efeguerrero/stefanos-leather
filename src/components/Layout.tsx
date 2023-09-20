@@ -2,9 +2,6 @@
 import Footer from "@/components/Footer";
 import Nav from "@/components/nav/Nav";
 
-//Framer Motion Imports
-import { motion } from "framer-motion";
-
 interface LayoutProps {
   children: React.ReactNode;
 }

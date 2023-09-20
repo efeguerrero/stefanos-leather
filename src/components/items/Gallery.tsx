@@ -13,19 +13,19 @@ const Gallery = ({ images }: GalleryProps) => {
 
   return (
     <section className="mx-auto flex flex-col gap-6">
-      <div className="aspect-square w-full overflow-hidden rounded-md lg:h-[25rem] lg:w-auto">
+      <div className="aspect-square w-full overflow-hidden rounded-md ">
         <img
           src={currentImg}
           alt="product"
           className="h-full w-full object-cover"
         />
       </div>
-      <div className="flex cursor-pointer flex-row gap-3">
+      <div className="grid cursor-pointer grid-cols-4 gap-3">
         {images.map((image: any, index: number) => {
           return (
             <div
               key={index}
-              className="wrap aspect-square w-[25%] overflow-hidden rounded-md"
+              className="wrap aspect-square w-full overflow-hidden rounded-md transition-all duration-200 lg:hover:-translate-y-1"
             >
               <img
                 onClick={() => setCurrentImg(image.fields.file.url)}

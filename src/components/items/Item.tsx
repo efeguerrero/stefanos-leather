@@ -15,7 +15,7 @@ interface ItemProps {
 
 const Item = ({ product }: ItemProps) => {
   return (
-    <div className="grid gap-8 lg:grid-cols-2 lg:gap-2 lg:px-12">
+    <div className="grid gap-8 lg:grid-cols-2 lg:gap-2 ">
       <div className="flex flex-col gap-8 lg:pr-2">
         <Info product={product} />
         <div className="hidden lg:block">
