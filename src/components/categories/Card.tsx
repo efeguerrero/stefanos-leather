@@ -31,6 +31,7 @@ const Card = ({ category }: CardProps) => {
           src={`https:${coverImageUrl}`}
           alt={`Cover image for ${name}`}
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="h-full w-full object-cover object-center"
         />
       </div>
