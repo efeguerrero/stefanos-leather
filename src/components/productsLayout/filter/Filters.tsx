@@ -32,7 +32,9 @@ const Filters = ({ setMobileFiltersOpen }: FiltersProps) => {
 
   return (
     <>
-      <h3 className="sr-only">Categories</h3>
+      <h3 className="sr-only">
+        Product Categories and Subcategories filter menu
+      </h3>
       <ul
         role="list"
         className="space-y-4 border-b border-gray-300 pb-6 text-sm font-medium"
