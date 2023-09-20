@@ -37,6 +37,7 @@ const Layout = ({ children }: LayoutProps) => {
             name="twitter:image"
             content="https://leather-preview.vercel.app/assets/images/brand/ogImageT.png"
           />
+          <meta property="og:url" content="leather-preview.vercel.app" />
           <meta name="twitter:image:type" content="png" />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Stefanos Leather" />
