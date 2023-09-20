@@ -14,7 +14,7 @@ const ProductsLayout = ({ children }: LayoutProps) => {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
   return (
-    <section>
+    <section className="min-h-[100dvh]">
       {/* Mobile filter dialog */}
       <FilterDialog
         mobileFiltersOpen={mobileFiltersOpen}
