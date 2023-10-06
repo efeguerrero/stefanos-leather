@@ -15,4 +15,4 @@ Product catalogue website built for Stefanos Leather. Built with NextJS as a sta
 
 ## To See Project
 
-[![App](https://img.shields.io/badge/App-informational?style=for-the-badge&logo=netlify&logoColor=fff&color=23272d)](https://franguerrero.dev/)
+[![App](https://img.shields.io/badge/App-informational?style=for-the-badge&logo=netlify&logoColor=fff&color=23272d)]([https://franguerrero.dev/](https://leather-preview.vercel.app/)https://leather-preview.vercel.app/)
