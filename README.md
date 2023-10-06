@@ -10,7 +10,7 @@ Product catalogue website built for Stefanos Leather. Built with NextJS as a sta
 - ![Tailwind](https://img.shields.io/badge/-Tailwind-0A1A2F?style=flat&logo=tailwindCSS)
 - ![Typescript](https://img.shields.io/badge/-Typescript-0A1A2F?style=flat&logo=typeScript)
 - ![Contentful](https://img.shields.io/badge/-Contentful-0A1A2F?style=flat&logo=contentful)
-- ![Radix](https://img.shields.io/badge/-Radix-0A1A2F?style=flat&logo=radix)
+- ![Radix](https://img.shields.io/badge/-Radix-0A1A2F?style=flat&logo=radixui)
 
 
 ## To See Project
