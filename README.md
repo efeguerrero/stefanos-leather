@@ -1,6 +1,6 @@
 # Stefanos Leather 
 
-## Product catalogue website built for Stefanos Leather. Built with NextJS as a static site for optimized performance and Contentful CMS for catalogue management.
+Product catalogue website built for Stefanos Leather. Built with NextJS as a static site for optimized performance and Contentful CMS for catalogue management.
 
 
 
@@ -8,9 +8,9 @@
 
 - ![NextJS](https://img.shields.io/badge/-Astro-0A1A2F?style=flat&logo=next.JS)
 - ![Tailwind](https://img.shields.io/badge/-Tailwind-0A1A2F?style=flat&logo=tailwindCSS)
-- ![Typescript](https://img.shields.io/badge/-Tailwind-0A1A2F?style=flat&logo=typescript)
+- ![Typescript](https://img.shields.io/badge/-Tailwind-0A1A2F?style=flat&logo=typeScript)
 - ![Contentful](https://img.shields.io/badge/-Tailwind-0A1A2F?style=flat&logo=contentful)
-- ![Radix](https://img.shields.io/badge/-Tailwind-0A1A2F?style=flat&logo=contentful)
+- ![Radix](https://img.shields.io/badge/-Tailwind-0A1A2F?style=flat&logo=radix.ui)
 
 
 ## To See Project
