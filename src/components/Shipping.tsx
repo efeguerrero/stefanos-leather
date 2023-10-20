@@ -1,7 +1,11 @@
 import { useRef } from "react";
 
 import {
+  ArchiveBoxIcon,
   CloudArrowUpIcon,
+  CubeIcon,
+  CurrencyDollarIcon,
+  GlobeAltIcon,
   LockClosedIcon,
   ServerIcon,
 } from "@heroicons/react/20/solid";
@@ -18,22 +22,22 @@ import Image from "next/image";
 
 const features = [
   {
-    name: "Push to deploy.",
+    name: "Transport.",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
-    icon: CloudArrowUpIcon,
+      " We offer shipping options via air or sea transport, depending on the customer's preference.",
+    icon: GlobeAltIcon,
   },
   {
-    name: "SSL certificates.",
+    name: "Pricing Policy.",
     description:
-      "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
-    icon: LockClosedIcon,
+      " Our international pricing policy is based on FOB (Free On Board) pricing.",
+    icon: CurrencyDollarIcon,
   },
   {
-    name: "Database backups.",
+    name: "Product Delivery.",
     description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
-    icon: ServerIcon,
+      "Packaging and handling methods to ensure the safe delivery of your products.",
+    icon: CubeIcon,
   },
 ];
 
@@ -60,9 +64,9 @@ export default function Shipping() {
               Worldwide Shipping
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-              impedit perferendis suscipit eaque, iste dolor cupiditate
-              blanditiis ratione.
+              Our headquarters are located in Buenos Aires, Argentina, but we
+              have been serving as exporters since 1995, with our primary
+              destinations including Germany, Russia, and Greece, among others.
             </p>
             <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
               {features.map((feature) => (
