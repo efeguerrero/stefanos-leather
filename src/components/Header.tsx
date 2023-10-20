@@ -5,8 +5,6 @@ const images = [
   "https://images.pexels.com/photos/5942742/pexels-photo-5942742.jpeg?auto=compress&cs=tinysrgb&w=600",
   "https://images.pexels.com/photos/9565973/pexels-photo-9565973.jpeg?auto=compress&cs=tinysrgb&w=600",
   "https://images.pexels.com/photos/12474787/pexels-photo-12474787.jpeg?auto=compress&cs=tinysrgb&w=600",
-  "https://images.pexels.com/photos/12619591/pexels-photo-12619591.jpeg?auto=compress&cs=tinysrgb&w=600",
-  "https://images.pexels.com/photos/5942742/pexels-photo-5942742.jpeg?auto=compress&cs=tinysrgb&w=600",
 ];
 
 const Header = () => {
@@ -25,21 +23,12 @@ const Header = () => {
               id="imageGrid"
               className=" hidden h-full grow auto-rows-[100%] justify-center gap-6 sm:grid sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3 "
             >
-              <div className="hidden h-full pb-6 lg:hidden">
-                <Image
-                  src={images[0]}
-                  width={600}
-                  height={900}
-                  alt="Living Room Photo"
-                  className="h-full min-h-0 rounded-lg object-cover"
-                />
-              </div>
               <div className="flex h-full flex-col justify-start gap-6 pb-3 @container">
                 <h2 className="text-left font-extrabold uppercase leading-[1] tracking-normal text-gray-950 @[1rem]:text-[17cqw]">
                   Argentine leather to the world
                 </h2>
                 <Image
-                  src={images[1]}
+                  src={images[0]}
                   width={600}
                   height={900}
                   alt="Living Room Photo"
@@ -50,7 +39,7 @@ const Header = () => {
                 <Image
                   width={600}
                   height={900}
-                  src={images[2]}
+                  src={images[1]}
                   priority
                   alt="Living Room Photo"
                   className=" h-full min-h-0 rounded-lg object-cover "
@@ -58,7 +47,7 @@ const Header = () => {
               </div>
               <div className="flex h-full flex-col gap-6">
                 <Image
-                  src={images[3]}
+                  src={images[2]}
                   width={600}
                   height={900}
                   alt="Living Room Photo"
@@ -74,15 +63,6 @@ const Header = () => {
                   materials, for both local and global markets for over 35
                   years.
                 </h2>
-              </div>
-              <div className="hidden h-full pb-3 pt-6 2xl:hidden">
-                <Image
-                  src={images[4]}
-                  width={600}
-                  height={900}
-                  alt="Living Room Photo"
-                  className=" h-full min-h-0 rounded-lg object-cover "
-                />
               </div>
             </div>
             {/* mobile Img Grid */}
@@ -103,7 +83,7 @@ const Header = () => {
                 <Image
                   width={600}
                   height={900}
-                  src={images[2]}
+                  src={images[1]}
                   priority
                   alt="Living Room Photo"
                   className=" h-full min-h-0 rounded-lg object-cover "
@@ -111,7 +91,7 @@ const Header = () => {
               </div>
               <div className="h-full pb-8 pt-0">
                 <Image
-                  src={images[3]}
+                  src={images[2]}
                   width={600}
                   height={900}
                   alt="Living Room Photo"
