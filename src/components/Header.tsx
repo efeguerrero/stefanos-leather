@@ -26,7 +26,6 @@ const Header = () => {
                   Argentine leather to the world
                 </h2>
                 <Image
-                  placeholder="blur"
                   src={headerImg1}
                   alt="Living Room Photo"
                   className="h-full min-h-0 rounded-lg object-cover"
@@ -36,7 +35,6 @@ const Header = () => {
                 <Image
                   src={headerImg2}
                   priority
-                  placeholder="blur"
                   alt="Living Room Photo"
                   className=" h-full min-h-0 rounded-lg object-cover "
                 />
@@ -44,7 +42,6 @@ const Header = () => {
               <div className="flex h-full flex-col gap-6">
                 <Image
                   src={headerImg3}
-                  placeholder="blur"
                   alt="Living Room Photo"
                   className="h-full min-h-0 rounded-lg object-cover"
                 />
@@ -68,7 +65,6 @@ const Header = () => {
               <div className="h-full pt-12">
                 <Image
                   src={headerImg1}
-                  placeholder="blur"
                   alt="Living Room Photo"
                   className="h-full min-h-0 rounded-lg object-cover"
                 />
@@ -77,7 +73,6 @@ const Header = () => {
                 <Image
                   src={headerImg2}
                   priority
-                  placeholder="blur"
                   alt="Living Room Photo"
                   className=" h-full min-h-0 rounded-lg object-cover "
                 />
@@ -85,7 +80,6 @@ const Header = () => {
               <div className="h-full pb-8 pt-0">
                 <Image
                   src={headerImg3}
-                  placeholder="blur"
                   alt="Living Room Photo"
                   className=" h-full min-h-0 rounded-lg object-cover "
                 />
