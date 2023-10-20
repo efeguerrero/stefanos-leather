@@ -1,11 +1,9 @@
 import Image from "next/image";
 
-//Dummy images
-const images = [
-  "https://images.pexels.com/photos/5942742/pexels-photo-5942742.jpeg?auto=compress&cs=tinysrgb&w=600",
-  "https://images.pexels.com/photos/9565973/pexels-photo-9565973.jpeg?auto=compress&cs=tinysrgb&w=600",
-  "https://images.pexels.com/photos/12474787/pexels-photo-12474787.jpeg?auto=compress&cs=tinysrgb&w=600",
-];
+//Images Import
+import headerImg1 from "@/assets/imgs/header/headerImg_1.jpeg";
+import headerImg2 from "@/assets/imgs/header/headerImg_2.jpeg";
+import headerImg3 from "@/assets/imgs/header/headerImg_3.jpg";
 
 const Header = () => {
   return (
@@ -28,18 +26,14 @@ const Header = () => {
                   Argentine leather to the world
                 </h2>
                 <Image
-                  src={images[0]}
-                  width={600}
-                  height={900}
+                  src={headerImg1}
                   alt="Living Room Photo"
                   className="h-full min-h-0 rounded-lg object-cover"
                 />
               </div>
               <div className="hidden h-full pb-6 pt-10 lg:block">
                 <Image
-                  width={600}
-                  height={900}
-                  src={images[1]}
+                  src={headerImg2}
                   priority
                   alt="Living Room Photo"
                   className=" h-full min-h-0 rounded-lg object-cover "
@@ -47,9 +41,7 @@ const Header = () => {
               </div>
               <div className="flex h-full flex-col gap-6">
                 <Image
-                  src={images[2]}
-                  width={600}
-                  height={900}
+                  src={headerImg3}
                   alt="Living Room Photo"
                   className="h-full min-h-0 rounded-lg object-cover"
                 />
@@ -72,18 +64,14 @@ const Header = () => {
             >
               <div className="h-full pt-12">
                 <Image
-                  src={images[0]}
-                  width={600}
-                  height={900}
+                  src={headerImg1}
                   alt="Living Room Photo"
                   className="h-full min-h-0 rounded-lg object-cover"
                 />
               </div>
               <div className="h-full pb-4 pt-6 ">
                 <Image
-                  width={600}
-                  height={900}
-                  src={images[1]}
+                  src={headerImg2}
                   priority
                   alt="Living Room Photo"
                   className=" h-full min-h-0 rounded-lg object-cover "
@@ -91,9 +79,7 @@ const Header = () => {
               </div>
               <div className="h-full pb-8 pt-0">
                 <Image
-                  src={images[2]}
-                  width={600}
-                  height={900}
+                  src={headerImg3}
                   alt="Living Room Photo"
                   className=" h-full min-h-0 rounded-lg object-cover "
                 />
