@@ -1,9 +1,9 @@
 import Image from "next/image";
 
 //Images Import
-import headerImg1 from "@/assets/imgs/header/headerImg_1.jpeg";
-import headerImg2 from "@/assets/imgs/header/headerImg_2.jpeg";
-import headerImg3 from "@/assets/imgs/header/headerImg_3.jpg";
+import headerImg1 from "@/assets/imgs/header/headerImg_1.webp";
+import headerImg2 from "@/assets/imgs/header/headerImg_2.webp";
+import headerImg3 from "@/assets/imgs/header/headerImg_3.webp";
 
 const Header = () => {
   return (
