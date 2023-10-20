@@ -69,10 +69,10 @@ const Header = () => {
                     We are Stefanos Leather.
                   </span>
                   <br />
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Recusandae sint deserunt autem fuga, a soluta accusantium
-                  tempora quaerat similique perspiciatis nihil voluptate at
-                  delectus tenetur doloremque sed, accusamus consequatur rerum.
+                  Based in Argentina, we have been crafting and distributing
+                  leather and fur products, using only the finest local raw
+                  materials, for both local and global markets for over 35
+                  years.
                 </h2>
               </div>
               <div className="hidden h-full pb-3 pt-6 2xl:hidden">
@@ -130,10 +130,9 @@ const Header = () => {
           </span>
           <br />
           <br />
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae
-          sint deserunt autem fuga, a soluta accusantium tempora quaerat
-          similique perspiciatis nihil voluptate at delectus tenetur doloremque
-          sed, accusamus consequatur rerum.
+          Based in Argentina, we have been crafting and distributing leather and
+          fur products, using only the finest local raw materials, for both
+          local and global markets for over 35 years.
         </h2>
       </section>
     </>
