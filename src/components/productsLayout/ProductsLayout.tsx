@@ -22,6 +22,7 @@ const ProductsLayout = ({ children, productData }: LayoutProps) => {
       <FilterDialog
         mobileFiltersOpen={mobileFiltersOpen}
         setMobileFiltersOpen={setMobileFiltersOpen}
+        productData={productData}
       />
       {/* End of mobile filter dialog */}
       <main className="mx-auto max-w-7xl pt-6 lg:pt-8">

@@ -10,12 +10,14 @@ import Filters from "./Filters";
 //Component Props
 interface FilterDialogProps {
   mobileFiltersOpen: boolean;
+  productData: any;
   setMobileFiltersOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const FilterDialog = ({
   mobileFiltersOpen,
   setMobileFiltersOpen,
+  productData,
 }: FilterDialogProps) => {
   return (
     <Transition.Root show={mobileFiltersOpen} as={Fragment}>
@@ -61,7 +63,10 @@ const FilterDialog = ({
 
               {/* Mobile Filters */}
               <div className="mt-4 block py-6 lg:hidden">
-                <Filters setMobileFiltersOpen={setMobileFiltersOpen} />
+                <Filters
+                  productData={productData}
+                  setMobileFiltersOpen={setMobileFiltersOpen}
+                />
               </div>
             </Dialog.Panel>
           </Transition.Child>
