@@ -8,11 +8,19 @@ const Form = () => {
 
   return (
     <form
-      action="#"
+      action="https://api.web3forms.com/submit"
       method="POST"
       className="max-w-xl lg:max-w-none"
       onSubmit={(e) => formSubmit(e, setFormStatus)}
     >
+      <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+      <input
+        type="hidden"
+        name="subject"
+        value="New contact from Stefanos Leather"
+      />
+      <input type="hidden" name="from_name" value="Stefanos Leather" />
+
       <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
         <div>
           <label
