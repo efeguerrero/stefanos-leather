@@ -7,26 +7,6 @@ const Info = () => {
   return (
     <div>
       <div className="space-y-4 ">
-        {/* <p className="-mx-2 flex items-start">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="mx-2 h-6 w-6 text-gray-600"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth="2"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-            ></path>
-          </svg>
-          <span className="mx-2  truncate text-gray-600">
-            +54 9 11 3195 9697
-          </span>
-        </p> */}
-
         <p className="-mx-2 flex items-start">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -43,18 +23,17 @@ const Info = () => {
             ></path>
           </svg>
           <a
-            href="mailto:i???foATstef?nosle?therDOTcom"
+            href="mailto:stefa???osdecoAThotm?ilDOTcom"
             className="mx-2 text-gray-600"
             onClick={(e) =>
               (e.currentTarget.href = e.currentTarget.href
                 .replace("???", "n")
                 .replace("AT", "@")
                 .replace("?", "a")
-                .replace("?", "a")
                 .replace("DOT", "."))
             }
           >
-            info@stefanosleather.com
+            stefanosdeco@hotmail.com
           </a>
         </p>
         <p className="-mx-2 flex items-start">
