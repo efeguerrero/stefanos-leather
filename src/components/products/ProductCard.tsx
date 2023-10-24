@@ -14,8 +14,6 @@ const ProductCard = ({ product }: ProductCardProps) => {
   const subCategorySlug = subCategory.fields.slug;
   const { id } = product.sys;
 
-  console.log(product.sys.id);
-
   return (
     <Link
       href={`/products/${categorySlug}/${subCategorySlug}/item/${id}/${slug}`}

@@ -7,20 +7,16 @@ import Link from "next/link";
 //Component Imports
 import FilterAccordion from "./FilterAccordion";
 
-//ContentFul Imports
-import { useCategories } from "@/lib/contentful";
-
 const filterOptions = [{ name: "All Products", href: "/products" }];
 
 interface FiltersProps {
   setMobileFiltersOpen?: React.Dispatch<React.SetStateAction<boolean>>;
+  productData: any;
 }
 
-const Filters = ({ setMobileFiltersOpen }: FiltersProps) => {
+const Filters = ({ setMobileFiltersOpen, productData }: FiltersProps) => {
   const router = useRouter();
   const [activeLink, setActiveLink] = React.useState(router.asPath);
-
-  const { categories } = useCategories();
 
   //Only if SetMobileFilterOpen was passed as prop then we will set it as false. This only happens in mobile view. In desktop view we don't pass this prop.
   const handleMenuLinkClick = (a: HTMLAnchorElement): void => {
@@ -56,12 +52,13 @@ const Filters = ({ setMobileFiltersOpen }: FiltersProps) => {
           );
         })}
       </ul>
-      {categories?.map((category: any, index: number) => (
+      {productData.categories?.map((category: any, index: number) => (
         <FilterAccordion
           activeLink={activeLink}
           handleMenuLinkClick={handleMenuLinkClick}
           key={index}
           category={category}
+          subCategories={productData.subCategories}
           index={index}
         />
       ))}

@@ -8,10 +8,13 @@ import BreadCrumbs from "@/components/productsLayout/BreadCrumbs";
 
 interface LayoutProps {
   children: React.ReactNode;
+  productData: any;
 }
 
-const ProductsLayout = ({ children }: LayoutProps) => {
+const ProductsLayout = ({ children, productData }: LayoutProps) => {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+
+  console.log(productData.categories);
 
   return (
     <section key="productLayout" className="min-h-[100dvh]">
@@ -44,7 +47,7 @@ const ProductsLayout = ({ children }: LayoutProps) => {
               <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
                 {/* Desktop Filters */}
                 <div className=" hidden lg:block">
-                  <Filters />
+                  <Filters productData={productData} />
                 </div>
                 {/* Product grid */}
                 <div className="lg:col-span-3 lg:px-12">{children}</div>

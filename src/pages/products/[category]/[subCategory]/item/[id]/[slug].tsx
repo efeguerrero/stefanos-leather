@@ -55,16 +55,26 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const entryId = params?.id as string;
   const product = await contentfulClient.getEntry<Products>(entryId);
 
+  const categories = await contentfulClient.getEntries<Categories>({
+    content_type: "categories",
+  });
+
+  const subCategories = await contentfulClient.getEntries<SubCategories>({
+    content_type: "subCategories",
+  });
+
   return {
     props: {
       product: product,
+      categories: categories.items,
+      subCategories: subCategories.items,
     },
   };
 };
 
 //Type Definitions
 interface ProductProps {
-  Component: NextPageWithLayout;
+  Component: NextPageWithLayout<any>;
   product: any;
 }
 
@@ -72,10 +82,10 @@ const Product = ({ product }: ProductProps) => {
   return <Item product={product} />;
 };
 
-Product.getLayout = function getLayout(page: ReactElement) {
+Product.getLayout = function getLayout(page: ReactElement, props: any) {
   return (
     <Layout>
-      <ProductsLayout>{page}</ProductsLayout>
+      <ProductsLayout productData={props}>{page}</ProductsLayout>
     </Layout>
   );
 };

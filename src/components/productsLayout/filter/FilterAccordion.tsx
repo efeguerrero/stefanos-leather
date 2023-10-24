@@ -10,9 +10,6 @@ import * as Accordion from "@radix-ui/react-accordion";
 //Framer motion Imports
 import { motion, AnimatePresence } from "framer-motion";
 
-//ContentFul Imports
-import { useSubCategories } from "@/lib/contentful";
-
 //Hero Icons Imports
 import { MinusIcon, PlusIcon } from "@heroicons/react/20/solid";
 
@@ -28,20 +25,19 @@ const accordionContentVariants = {
 interface FiltersAccordionProps {
   index: number;
   category: any;
-
+  subCategories: any;
   handleMenuLinkClick: (a: HTMLAnchorElement) => void;
   activeLink: string;
 }
 
 const FilterAccordion = ({
   category,
+  subCategories,
   index,
   handleMenuLinkClick,
   activeLink,
 }: FiltersAccordionProps) => {
   const router = useRouter();
-
-  const { subCategories } = useSubCategories();
 
   const [open, setOpen] = React.useState(() => {
     if (router.query.category === category.fields.slug) {
