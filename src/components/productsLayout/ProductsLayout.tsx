@@ -36,7 +36,7 @@ const ProductsLayout = ({ children, productData }: LayoutProps) => {
           <div>
             {/* Mobile View */}
             <div className="mb-6 flex items-center justify-between border-b-[1px] border-gray-200 py-3 lg:hidden">
-              <BreadCrumbs />
+              <BreadCrumbs productData={productData} />
               <FilterTigger setMobileFiltersOpen={setMobileFiltersOpen} />
             </div>
 
