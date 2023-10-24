@@ -43,17 +43,17 @@ export const getStaticProps: GetStaticProps = async () => {
 //Props Interface
 interface ProductsProps {
   products: any;
-  Component: NextPageWithLayout;
+  Component: NextPageWithLayout<any>;
 }
 
 export default function Products({ products }: ProductsProps) {
   return <ProductGrid products={products} />;
 }
 
-Products.getLayout = function getLayout(page: ReactElement) {
+Products.getLayout = function getLayout(page: ReactElement, props: any) {
   return (
     <Layout>
-      <ProductsLayout>{page}</ProductsLayout>
+      <ProductsLayout productData={props}>{page}</ProductsLayout>
     </Layout>
   );
 };
