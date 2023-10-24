@@ -30,7 +30,7 @@ export const getStaticProps: GetStaticProps = async () => {
 //Props Interface
 interface HomeProps {
   categories: any;
-  Component: NextPageWithLayout;
+  Component: NextPageWithLayout<any>;
 }
 
 const Home = ({ categories }: HomeProps) => {
