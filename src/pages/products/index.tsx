@@ -14,7 +14,7 @@ import {
 } from "@/lib/contentful";
 
 //Types Import
-import type { GetStaticProps, GetStaticPaths } from "next";
+import type { GetStaticProps } from "next";
 import type { NextPageWithLayout } from "@/pages/_app";
 import type { ReactElement } from "react";
 

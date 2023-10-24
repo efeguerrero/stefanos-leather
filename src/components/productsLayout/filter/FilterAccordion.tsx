@@ -35,7 +35,6 @@ interface FiltersAccordionProps {
 
 const FilterAccordion = ({
   category,
-
   index,
   handleMenuLinkClick,
   activeLink,
