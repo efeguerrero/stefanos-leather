@@ -38,7 +38,7 @@ Please note that this open-source license applies specifically to the source cod
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/efeguerrero/stefanos-leather/blob/master/LICENSE) file for details.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
