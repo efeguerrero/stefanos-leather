@@ -1,6 +1,18 @@
+import { useState } from "react";
+
+//Hook import
+import { formSubmit } from "./formSubmit";
+
 const Form = () => {
+  const [formStatus, setFormStatus] = useState("");
+
   return (
-    <form action="#" method="POST" className="max-w-xl lg:max-w-none">
+    <form
+      action="#"
+      method="POST"
+      className="max-w-xl lg:max-w-none"
+      onSubmit={(e) => formSubmit(e, setFormStatus)}
+    >
       <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
         <div>
           <label
@@ -76,13 +88,16 @@ const Form = () => {
           </div>
         </div>
       </div>
-      <div className="mt-10">
+      <div className="relative mt-10">
         <button
           type="submit"
           className="block rounded-md bg-gray-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:bg-gray-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 lg:ml-auto"
         >
           Send Message
         </button>
+        <p className="absolute top-[120%] max-w-[30ch] text-sm text-bravo">
+          {formStatus}
+        </p>
       </div>
     </form>
   );
