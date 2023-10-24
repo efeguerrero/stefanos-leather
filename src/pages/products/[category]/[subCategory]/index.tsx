@@ -75,17 +75,17 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
 interface SubCategoryProductsProps {
   products: any;
-  Component: NextPageWithLayout;
+  Component: NextPageWithLayout<any>;
 }
 
 const SubCategory = ({ products }: SubCategoryProductsProps) => {
   return <ProductGrid products={products} />;
 };
 
-SubCategory.getLayout = function getLayout(page: ReactElement) {
+SubCategory.getLayout = function getLayout(page: ReactElement, props: any) {
   return (
     <Layout>
-      <ProductsLayout>{page}</ProductsLayout>
+      <ProductsLayout productData={props}>{page}</ProductsLayout>
     </Layout>
   );
 };

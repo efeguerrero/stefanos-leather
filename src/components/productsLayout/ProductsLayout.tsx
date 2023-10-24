@@ -8,9 +8,10 @@ import BreadCrumbs from "@/components/productsLayout/BreadCrumbs";
 
 interface LayoutProps {
   children: React.ReactNode;
+  productData: any;
 }
 
-const ProductsLayout = ({ children }: LayoutProps) => {
+const ProductsLayout = ({ children, productData }: LayoutProps) => {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
   return (
@@ -19,6 +20,7 @@ const ProductsLayout = ({ children }: LayoutProps) => {
       <FilterDialog
         mobileFiltersOpen={mobileFiltersOpen}
         setMobileFiltersOpen={setMobileFiltersOpen}
+        productData={productData}
       />
       {/* End of mobile filter dialog */}
       <main className="mx-auto max-w-7xl pt-6 lg:pt-8">
@@ -32,7 +34,7 @@ const ProductsLayout = ({ children }: LayoutProps) => {
           <div>
             {/* Mobile View */}
             <div className="mb-6 flex items-center justify-between border-b-[1px] border-gray-200 py-3 lg:hidden">
-              <BreadCrumbs />
+              <BreadCrumbs productData={productData} />
               <FilterTigger setMobileFiltersOpen={setMobileFiltersOpen} />
             </div>
 
@@ -44,7 +46,7 @@ const ProductsLayout = ({ children }: LayoutProps) => {
               <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
                 {/* Desktop Filters */}
                 <div className=" hidden lg:block">
-                  <Filters />
+                  <Filters productData={productData} />
                 </div>
                 {/* Product grid */}
                 <div className="lg:col-span-3 lg:px-12">{children}</div>

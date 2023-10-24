@@ -4,29 +4,26 @@ import React from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
-//ContentFul Imports
-import { useCategories, useSubCategories } from "@/lib/contentful";
+interface BreadCrumbsProps {
+  productData: any;
+}
 
-const BreadCrumbs = () => {
-  const { categories, categoriesLoading } = useCategories();
-  const { subCategories, subCategoriesLoading } = useSubCategories();
-
+const BreadCrumbs = ({ productData }: BreadCrumbsProps) => {
   const router = useRouter();
   const categorySlug = router.query.category;
   const subCategorySlug = router.query.subCategory;
 
-  const category = categories?.find(
+  const category = productData.categories?.find(
     (cat: any) => cat.fields.slug === categorySlug,
   );
 
   const categoryName = (category?.fields.name as String) || "";
 
-  const subCategory = subCategories?.find(
+  const subCategory = productData.subCategories?.find(
     (subCat: any) => subCat.fields.slug === subCategorySlug,
   );
   const subCategoryName = (subCategory?.fields.name as String) || "";
 
-  if (categoriesLoading || subCategoriesLoading) return <div></div>;
   return (
     <div className="flex lg:gap-4">
       <Link
