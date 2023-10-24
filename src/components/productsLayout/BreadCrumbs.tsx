@@ -4,9 +4,6 @@ import React from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
-//ContentFul Imports
-import { useCategories, useSubCategories } from "@/lib/contentful";
-
 interface BreadCrumbsProps {
   productData: any;
 }

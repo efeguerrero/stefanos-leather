@@ -14,8 +14,6 @@ interface LayoutProps {
 const ProductsLayout = ({ children, productData }: LayoutProps) => {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
-  console.log(productData.categories);
-
   return (
     <section key="productLayout" className="min-h-[100dvh]">
       {/* Mobile filter dialog */}
