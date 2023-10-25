@@ -7,43 +7,14 @@ const Info = () => {
   return (
     <div>
       <div className="space-y-4 ">
-        <p className="-mx-2 flex items-start">
+        <div className="flex items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="mx-2 h-6 w-6 text-gray-600"
+            className="h-7 w-7 text-gray-600"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
-            strokeWidth="2"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-            ></path>
-          </svg>
-          <a
-            href="mailto:stefa???osdecoAThotm?ilDOTcom"
-            className="mx-2 text-gray-600"
-            onClick={(e) =>
-              (e.currentTarget.href = e.currentTarget.href
-                .replace("???", "n")
-                .replace("AT", "@")
-                .replace("?", "a")
-                .replace("DOT", "."))
-            }
-          >
-            stefanosdeco@hotmail.com
-          </a>
-        </p>
-        <p className="-mx-2 flex items-start">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="mx-2 h-6 w-6 text-gray-600"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth="2"
+            strokeWidth="1.5"
           >
             <path
               strokeLinecap="round"
@@ -57,15 +28,41 @@ const Info = () => {
             ></path>
           </svg>
 
-          <span className="mx-2  text-gray-600">
+          <p className="mx-2  text-gray-600">
             Suipacha 837, Buenos Aires, Argentina.
-          </span>
-        </p>
+          </p>
+        </div>
       </div>
-      <div className="mt-6 lg:mt-8">
-        <div className="-mx-1.5 mt-4 flex">
+      <div className="mt-12 lg:mt-12">
+        <div className="mt-4 flex  gap-6">
+          <a
+            href="mailto:stefa???oscuerosAThotm?ilDOTcom"
+            className="flex h-8 w-8 items-center justify-start text-gray-600 transition-colors duration-300 lg:hover:text-bravo"
+            onClick={(e) =>
+              (e.currentTarget.href = e.currentTarget.href
+                .replace("???", "n")
+                .replace("AT", "@")
+                .replace("?", "a")
+                .replace("DOT", "."))
+            }
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-8 w-8"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="1.5"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+              ></path>
+            </svg>
+          </a>
           <Link
-            className="mx-1.5 transform text-gray-600 transition-colors duration-300 lg:hover:text-bravo"
+            className="text-gray-600 transition-colors duration-300 lg:hover:text-bravo "
             href="https://www.facebook.com/people/Stefanos-Deco/100064318380862/"
             target="_blank"
           >
@@ -74,15 +71,17 @@ const Info = () => {
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              strokeWidth="1.5"
             >
               <path
                 d="M7 10.2222V13.7778H9.66667V20H13.2222V13.7778H15.8889L16.7778 10.2222H13.2222V8.44444C13.2222 8.2087 13.3159 7.9826 13.4826 7.81591C13.6493 7.64921 13.8754 7.55556 14.1111 7.55556H16.7778V4H14.1111C12.9324 4 11.8019 4.46825 10.9684 5.30175C10.1349 6.13524 9.66667 7.2657 9.66667 8.44444V10.2222H7Z"
-                fill="currentColor"
+                fill="none"
+                stroke="currentColor"
               ></path>
             </svg>
           </Link>
           <Link
-            className="mx-1.5 transform text-gray-600 transition-colors duration-300 lg:hover:text-bravo"
+            className="text-gray-600 transition-colors duration-300 lg:hover:text-bravo"
             href="https://www.instagram.com/stefanosdeco/"
             target="_blank"
           >
