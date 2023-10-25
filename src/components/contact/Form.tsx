@@ -13,11 +13,10 @@ const Form = () => {
       className="max-w-xl lg:max-w-none"
       onSubmit={(e) => formSubmit(e, setFormStatus)}
     >
-      <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
       <input
         type="hidden"
         name="subject"
-        value="New contact from Stefanos Leather"
+        value="New Submission from Stefanos Leather"
       />
       <input type="hidden" name="from_name" value="Stefanos Leather" />
 

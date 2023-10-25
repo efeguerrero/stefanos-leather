@@ -1,5 +1,7 @@
 //Function for integrating form with Web3 Forms
 
+const key = process.env.NEXT_PUBLIC_WEB3_FORM_ACCESS_KEY;
+
 export const formSubmit = (
   e: React.FormEvent<HTMLFormElement>,
   setFormStatus: React.Dispatch<React.SetStateAction<string>>,
@@ -7,6 +9,7 @@ export const formSubmit = (
   e.preventDefault();
   const form = e.currentTarget;
   const formData = new FormData(form);
+  formData.append("access_key", `${key}`);
   const object = Object.fromEntries(formData);
   const json = JSON.stringify(object);
   setFormStatus("Sending message. Please wait.");
