@@ -14,7 +14,6 @@ import type { GetStaticProps } from "next";
 import type { ReactElement } from "react";
 
 //Get Static Props Function
-
 export const getStaticProps: GetStaticProps = async () => {
   const categories = await contentfulClient.getEntries<Categories>({
     content_type: "categories",
