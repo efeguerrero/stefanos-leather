@@ -14,11 +14,9 @@ const Gallery = ({ images }: GalleryProps) => {
   return (
     <section className="mx-auto flex flex-col gap-6">
       <div className="relative aspect-square w-full overflow-hidden rounded-md ">
-        <Image
+        <img
           src={`https:${currentImg}`}
-          fill
-          sizes="(max-width:1280px) 100vw, 40vw"
-          alt="product"
+          alt="product image"
           className="h-full w-full object-cover"
         />
       </div>
@@ -30,7 +28,7 @@ const Gallery = ({ images }: GalleryProps) => {
               onClick={() => setCurrentImg(image.fields.file.url)}
               className="relative aspect-square w-full overflow-hidden rounded-md"
             >
-              <Image
+              <img
                 src={`https:${image.fields.file.url}`}
                 width={150}
                 height={150}
