@@ -25,26 +25,28 @@ const Header = () => {
                 <h2 className="text-left font-extrabold uppercase leading-[1] tracking-normal text-gray-950 @[1rem]:text-[17cqw]">
                   Argentine leather to the world
                 </h2>
-                <Image
-                  src={headerImg1}
-                  priority={true}
+                <img
+                  src={headerImg1.src}
+                  // priority={true}
                   sizes="(min-width: 640px) 50vw,(min-width:1024px) 33vw,33vw"
                   alt="Living Room Photo"
                   className="h-full min-h-0 rounded-lg object-cover"
                 />
               </div>
               <div className="hidden h-full pb-6 pt-10 lg:block">
-                <Image
-                  src={headerImg2}
-                  priority={true}
+                <img
+                  src={headerImg2.src}
+                  sizes="(min-width: 640px) 50vw,(min-width:1024px) 33vw,33vw"
+                  // priority={true}
                   alt="Living Room Photo"
                   className=" h-full min-h-0 rounded-lg object-cover "
                 />
               </div>
               <div className="flex h-full flex-col gap-6">
-                <Image
-                  src={headerImg3}
-                  priority={true}
+                <img
+                  src={headerImg3.src}
+                  sizes="(min-width: 640px) 50vw,(min-width:1024px) 33vw,33vw"
+                  // priority={true}
                   alt="Living Room Photo"
                   className="h-full min-h-0 rounded-lg object-cover"
                 />
