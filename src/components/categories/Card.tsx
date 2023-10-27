@@ -27,11 +27,9 @@ const Card = ({ category }: CardProps) => {
   return (
     <div className="group relative overflow-hidden rounded-lg">
       <div className="relative aspect-square w-full overflow-hidden  bg-white transition-all duration-300 group-hover:scale-[1.02] group-hover:opacity-[0.95] ">
-        <Image
+        <img
           src={`https:${coverImageUrl}`}
           alt={`Cover image for ${name}`}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="h-full w-full object-cover object-center"
         />
       </div>
