@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 //Images Import
 import headerImg1 from "@/assets/imgs/header/headerImg_1.webp";
 import headerImg2 from "@/assets/imgs/header/headerImg_2.webp";
@@ -27,7 +25,6 @@ const Header = () => {
                 </h2>
                 <img
                   src={headerImg1.src}
-                  sizes="(min-width: 640px) 50vw,(min-width:1024px) 33vw,33vw"
                   alt="Living Room Photo"
                   className="h-full min-h-0 rounded-lg object-cover"
                 />
@@ -64,23 +61,22 @@ const Header = () => {
               className="grid w-full grow grid-cols-3 gap-2 pb-8 sm:hidden"
             >
               <div className="h-full pt-12">
-                <Image
-                  src={headerImg1}
+                <img
+                  src={headerImg1.src}
                   alt="Living Room Photo"
                   className="h-full min-h-0 rounded-lg object-cover"
                 />
               </div>
               <div className="h-full pb-4 pt-6 ">
-                <Image
-                  src={headerImg2}
-                  priority
+                <img
+                  src={headerImg2.src}
                   alt="Living Room Photo"
                   className=" h-full min-h-0 rounded-lg object-cover "
                 />
               </div>
               <div className="h-full pb-8 pt-0">
-                <Image
-                  src={headerImg3}
+                <img
+                  src={headerImg3.src}
                   alt="Living Room Photo"
                   className=" h-full min-h-0 rounded-lg object-cover "
                 />
