@@ -28,7 +28,7 @@ const Header = () => {
                 <img
                   src={headerImg1.src}
                   // priority={true}
-                  sizes="(min-width: 640px) 50vw,(min-width:1024px) 33vw,33vw"
+                  // sizes="(min-width: 640px) 50vw,(min-width:1024px) 33vw,33vw"
                   alt="Living Room Photo"
                   className="h-full min-h-0 rounded-lg object-cover"
                 />
@@ -36,7 +36,7 @@ const Header = () => {
               <div className="hidden h-full pb-6 pt-10 lg:block">
                 <img
                   src={headerImg2.src}
-                  sizes="(min-width: 640px) 50vw,(min-width:1024px) 33vw,33vw"
+                  // sizes="(min-width: 640px) 50vw,(min-width:1024px) 33vw,33vw"
                   // priority={true}
                   alt="Living Room Photo"
                   className=" h-full min-h-0 rounded-lg object-cover "
@@ -44,8 +44,9 @@ const Header = () => {
               </div>
               <div className="flex h-full flex-col gap-6">
                 <img
+                  loading="eager"
                   src={headerImg3.src}
-                  sizes="(min-width: 640px) 50vw,(min-width:1024px) 33vw,33vw"
+                  // sizes="(min-width: 640px) 50vw,(min-width:1024px) 33vw,33vw"
                   // priority={true}
                   alt="Living Room Photo"
                   className="h-full min-h-0 rounded-lg object-cover"
