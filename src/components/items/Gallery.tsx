@@ -1,8 +1,5 @@
 import React from "react";
 
-//Next Imports
-import Image from "next/image";
-
 //Type Definition
 interface GalleryProps {
   images: any[];
