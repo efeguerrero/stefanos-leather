@@ -14,23 +14,27 @@ const Gallery = ({ images }: GalleryProps) => {
         <img
           src={`https:${currentImg}`}
           alt="product image"
-          className="h-full w-full object-cover"
+          className=" h-full w-full object-cover lg:object-contain "
         />
       </div>
       <div className="grid cursor-pointer grid-cols-4 gap-3 md:grid-cols-6 lg:grid-cols-4">
         {images.map((image: any, index: number) => {
+          const isImgActive =
+            currentImg === image.fields.file.url ? true : false;
           return (
             <div
               key={index}
-              onClick={() => setCurrentImg(image.fields.file.url)}
-              className="relative aspect-square w-full overflow-hidden rounded-md"
+              onMouseEnter={() => setCurrentImg(image.fields.file.url)}
+              className={`${
+                isImgActive ? "border-gray-400" : null
+              } relative aspect-square w-full overflow-hidden rounded-md border-[1px] transition-all`}
             >
               <img
                 src={`https:${image.fields.file.url}`}
                 width={150}
                 height={150}
                 alt="product"
-                className="h-full w-full object-cover"
+                className=" h-full w-full object-contain"
               />
             </div>
           );

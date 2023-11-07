@@ -25,11 +25,11 @@ const Card = ({ category }: CardProps) => {
 
   return (
     <div className="group relative overflow-hidden rounded-lg">
-      <div className="relative aspect-square w-full overflow-hidden  bg-white transition-all duration-300  group-hover:opacity-[0.85] ">
+      <div className="relative aspect-square w-full overflow-hidden  bg-white transition-all duration-300  group-hover:opacity-[0.80]">
         <img
           src={`https:${coverImageUrl}`}
           alt={`Cover image for ${name}`}
-          className="h-full w-full object-cover object-center"
+          className="h-full w-full object-cover object-center [transform:translate3d(0px,_0px,_1px)]"
         />
       </div>
       <h3 className="mt-4 text-xl font-semibold text-gray-950">

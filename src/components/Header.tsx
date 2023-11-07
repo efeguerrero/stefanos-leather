@@ -26,14 +26,14 @@ const Header = () => {
                 <img
                   src={headerImg1.src}
                   alt="Living Room Photo"
-                  className="h-full min-h-0 rounded-lg object-cover"
+                  className="h-full min-h-0 rounded-lg object-cover [transform:translate3d(0px,_0px,_1px)]"
                 />
               </div>
               <div className="hidden h-full pb-6 pt-10 lg:block">
                 <img
                   src={headerImg2.src}
                   alt="Living Room Photo"
-                  className=" h-full min-h-0 rounded-lg object-cover "
+                  className=" h-full min-h-0 rounded-lg object-cover [transform:translate3d(0px,_0px,_1px)] "
                 />
               </div>
               <div className="flex h-full flex-col gap-6">
@@ -41,7 +41,7 @@ const Header = () => {
                   loading="eager"
                   src={headerImg3.src}
                   alt="Living Room Photo"
-                  className="h-full min-h-0 rounded-lg object-cover"
+                  className="h-full min-h-0 rounded-lg object-cover [transform:translate3d(0px,_0px,_1px)]"
                 />
                 <h2 className="font-regular f col-start-2 pb-12 text-left text-base tracking-tighter text-gray-800">
                   <span className="text-xl font-extrabold uppercase tracking-normal">

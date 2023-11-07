@@ -18,11 +18,11 @@ const ProductCard = ({ product }: ProductCardProps) => {
       href={`/products/${categorySlug}/${subCategorySlug}/item/${id}/${slug}`}
       className="group"
     >
-      <div className="relative aspect-square  w-full overflow-hidden rounded-lg bg-gray-200">
+      <div className="relative  w-full overflow-hidden rounded-lg bg-gray-200">
         <img
           src={`https:${coverImage.fields.file.url}`}
           alt="Product Image"
-          className="h-full w-full object-cover object-center transition-all duration-300 lg:group-hover:scale-[1.03]"
+          className="aspect-square h-full w-full object-cover object-center transition-all duration-300 [transform:translate3d(0px,_0px,_1px)] hover:opacity-[0.85] "
         />
       </div>
       <h3 className="mt-4 text-base font-medium text-gray-600">{name}</h3>
