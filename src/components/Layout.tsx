@@ -29,15 +29,15 @@ const Layout = ({ children }: LayoutProps) => {
           />
           <meta
             property="og:image"
-            content="https://leather-preview.vercel.app/assets/images/brand/ogImageF.png"
+            content="https://www.stefanosleather.com/assets/images/brand/ogImageF.png"
           />
           <meta property="og:image:type" content="png" />
           <meta name="twitter:card" content="summary_large_image" />
           <meta
             name="twitter:image"
-            content="https://leather-preview.vercel.app/assets/images/brand/ogImageT.png"
+            content="https://www.stefanosleather.com/assets/images/brand/ogImageT.png"
           />
-          <meta property="og:url" content="leather-preview.vercel.app" />
+          <meta property="og:url" content="https://www.stefanosleather.com" />
           <meta name="twitter:image:type" content="png" />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Stefanos Leather" />
