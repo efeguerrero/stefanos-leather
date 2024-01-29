@@ -2,6 +2,7 @@ import type { ReactElement, ReactNode } from "react";
 
 //Next Imports
 import type { NextPage, InferGetStaticPropsType } from "next";
+import { Analytics } from "@vercel/analytics/react";
 
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
@@ -34,5 +35,11 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
   // Use the layout defined at the page level, if available
   const getLayout = Component.getLayout ?? ((page) => page);
 
-  return getLayout(<Component {...pageProps} />, pageProps);
+  return getLayout(
+    <>
+      <Component {...pageProps} />
+      <Analytics />
+    </>,
+    pageProps,
+  );
 }

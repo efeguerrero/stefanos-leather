@@ -1,7 +1,7 @@
 import React from "react";
 
 //Contentful Imports
-import { BLOCKS, MARKS } from "@contentful/rich-text-types";
+import { BLOCKS } from "@contentful/rich-text-types";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 //Type Definition
