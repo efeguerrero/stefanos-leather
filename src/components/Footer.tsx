@@ -25,7 +25,7 @@ const Footer = () => {
         </Link>
         <p className=" mt-4 text-center text-sm sm:ml-4 sm:mt-0 sm:border-gray-600 sm:py-2 sm:pl-4 lg:border-l-2">
           All Rights Reserved. ©<span id="yearHolder">{currentYear}</span>{" "}
-          Stefanos Leather
+          Stefanos Leather.
         </p>
         <span className="mt-4 inline-flex justify-center sm:mt-0 sm:justify-start lg:ml-auto">
           <p className="text-sm">
